@@ -1,0 +1,17 @@
+C:\Users\Andzelika\OneDrive - Kaunas University of Technology\4 semestras\Programavimo inžinerija\Aplication\Grafine\bin\Debug\Grafine.exe.config
+C:\Users\Andzelika\OneDrive - Kaunas University of Technology\4 semestras\Programavimo inžinerija\Aplication\Grafine\bin\Debug\Grafine.exe
+C:\Users\Andzelika\OneDrive - Kaunas University of Technology\4 semestras\Programavimo inžinerija\Aplication\Grafine\bin\Debug\Grafine.pdb
+C:\Users\Andzelika\OneDrive - Kaunas University of Technology\4 semestras\Programavimo inžinerija\Aplication\Grafine\obj\Debug\Grafine.csprojAssemblyReference.cache
+C:\Users\Andzelika\OneDrive - Kaunas University of Technology\4 semestras\Programavimo inžinerija\Aplication\Grafine\obj\Debug\Grafine.Properties.Resources.resources
+C:\Users\Andzelika\OneDrive - Kaunas University of Technology\4 semestras\Programavimo inžinerija\Aplication\Grafine\obj\Debug\Grafine.csproj.GenerateResource.cache
+C:\Users\Andzelika\OneDrive - Kaunas University of Technology\4 semestras\Programavimo inžinerija\Aplication\Grafine\obj\Debug\Grafine.csproj.CoreCompileInputs.cache
+C:\Users\Andzelika\OneDrive - Kaunas University of Technology\4 semestras\Programavimo inžinerija\Aplication\Grafine\obj\Debug\Grafine.exe
+C:\Users\Andzelika\OneDrive - Kaunas University of Technology\4 semestras\Programavimo inžinerija\Aplication\Grafine\obj\Debug\Grafine.pdb
+C:\Users\Andzelika\OneDrive - Kaunas University of Technology\4 semestras\Programavimo inžinerija\Aplication\Grafine\obj\Debug\Grafine.Login.resources
+C:\Users\Andzelika\OneDrive - Kaunas University of Technology\4 semestras\Programavimo inžinerija\Aplication\Grafine\obj\Debug\Grafine.Main.resources
+C:\Users\Andzelika\OneDrive - Kaunas University of Technology\4 semestras\Programavimo inžinerija\Aplication\Grafine\obj\Debug\Grafine.Registration.resources
+C:\Users\Andzelika\OneDrive - Kaunas University of Technology\4 semestras\Programavimo inžinerija\Aplication\Grafine\obj\Debug\Grafine.Katalogas.resources
+C:\Users\Andzelika\OneDrive - Kaunas University of Technology\4 semestras\Programavimo inžinerija\Aplication\Grafine\obj\Debug\Grafine.Product.resources
+C:\Users\Andzelika\OneDrive - Kaunas University of Technology\4 semestras\Programavimo inžinerija\Aplication\Grafine\obj\Debug\Grafine.Informacija.resources
+C:\Users\Andzelika\OneDrive - Kaunas University of Technology\4 semestras\Programavimo inžinerija\Aplication\Grafine\obj\Debug\Grafine.Katalogo_koregavimas.resources
+C:\Users\Andzelika\OneDrive - Kaunas University of Technology\4 semestras\Programavimo inžinerija\Aplication\Grafine\obj\Debug\Grafine.Imone.resources
