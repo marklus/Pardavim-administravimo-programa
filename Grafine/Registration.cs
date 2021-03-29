@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using MySql.Data.MySqlClient;
+using Grafine.Utils;
+using System.IO;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -44,6 +47,81 @@ namespace Grafine
             this.Close();
         }
 
-       
+        private void buttonRegistr_Click(object sender, EventArgs e)
+        {
+            string companyName = textBoxCompName.Text;
+            string companyCode = textBoxCompID.Text;
+            string email = textBoxEmail.Text;
+            string username = textBoxUsrName.Text;
+            string password = textBoxPsw.Text;
+            string confirm = textBoxCnfPsw.Text;
+            string phone = textBoxTel.Text;
+            int counter = 0;
+            Dictionary<string, string> outputCompanies = new Dictionary<string, string>();
+
+            if (password == confirm)
+            {
+                MySqlDataReader outputStreamCompany = Database.Select($"SELECT * FROM dalysadmin.imones WHERE pavadinimas ='{companyName}' AND vidKo = '{companyCode}';");
+                while (outputStreamCompany.Read())
+                {
+                    counter++;
+                    Console.WriteLine(outputStreamCompany["id"] + " " + outputStreamCompany["pavadinimas"] + " " + outputStreamCompany["vidKo"]);
+                    outputCompanies.Add(outputStreamCompany["pavadinimas"].ToString(), outputStreamCompany["vidKo"].ToString());
+                }
+                Database.Close();
+                if (counter == 0)
+                {
+                    popup newForm = new popup("Jūsų nurodyta įmonė nerasta.");
+                    newForm.ShowDialog();
+                }
+                else if (counter == 1)
+                {
+                    //Console.WriteLine("imone rasta");
+                    counter = 0;
+                    List<string> outputUsers = new List<string>();
+                    MySqlDataReader outputStreamUsers = Database.Select($"SELECT * FROM dalysadmin.vartotojai WHERE vardas ='{username}';");
+                    while (outputStreamUsers.Read())
+                    {
+                        counter++;
+                        //outputUsers.Add(outputStreamCompany["vardas"].ToString());
+                    }
+                    Database.Close();
+                    if (counter != 0)
+                    {
+                        popup newForm = new popup("Nurodytas vartotojas egzistuoja.");
+                        newForm.ShowDialog();
+                        //Console.WriteLine("toks vartotojas jau egzistuoja");
+                    }
+                    else
+                    {
+                        Database.Insert($"INSERT INTO dalysadmin.vartotojai(vardas, slaptazodis, telNr, elPastas, imonesPavad) VALUES('{username}','{password}','{phone}','{email}','{companyName}'); ");
+
+                        //Console.WriteLine("pavyko registruoti");
+                        Database.Close();
+                        popup newForm = new popup("Pavyko registruoti!");
+                        newForm.ShowDialog();
+                    }
+                }
+                else
+                {
+                    popup newForm = new popup("imoniu per daug! susisiekite su administratoriumi.");
+                    newForm.ShowDialog();
+                    //Console.WriteLine("imoniu per daug! susisiekite su administratoriumi");
+                }
+            }
+            else
+            {
+                popup newForm = new popup("Slaptažodžiai nesutampa.");
+                newForm.ShowDialog();
+            }
+        }
+
+        private void labelSingIn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login newForm = new Login();
+            newForm.ShowDialog();
+            this.Close();
+        }
     }
 }
