@@ -32,6 +32,7 @@
             this.textBoxStorehouseId = new System.Windows.Forms.TextBox();
             this.textBoxCompID = new System.Windows.Forms.TextBox();
             this.textBoxCompName = new System.Windows.Forms.TextBox();
+            this.labelSingIn = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // buttonRegistr
@@ -77,11 +78,24 @@
             this.textBoxCompName.TabIndex = 14;
             this.textBoxCompName.Text = "Įmonės pavadinimas";
             // 
+            // labelSingIn
+            // 
+            this.labelSingIn.AutoSize = true;
+            this.labelSingIn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.labelSingIn.Font = new System.Drawing.Font("Arial Narrow", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(186)));
+            this.labelSingIn.Location = new System.Drawing.Point(117, 224);
+            this.labelSingIn.Name = "labelSingIn";
+            this.labelSingIn.Size = new System.Drawing.Size(94, 20);
+            this.labelSingIn.TabIndex = 18;
+            this.labelSingIn.Text = "Prisijungimas";
+            this.labelSingIn.Click += new System.EventHandler(this.labelSingIn_Click);
+            // 
             // RegistrationCompany
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(350, 251);
+            this.Controls.Add(this.labelSingIn);
             this.Controls.Add(this.buttonRegistr);
             this.Controls.Add(this.textBoxStorehouseId);
             this.Controls.Add(this.textBoxCompID);
@@ -99,5 +113,6 @@
         private System.Windows.Forms.TextBox textBoxStorehouseId;
         private System.Windows.Forms.TextBox textBoxCompID;
         private System.Windows.Forms.TextBox textBoxCompName;
+        private System.Windows.Forms.Label labelSingIn;
     }
 }

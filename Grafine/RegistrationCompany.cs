@@ -48,5 +48,13 @@ namespace Grafine
                 newForm.ShowDialog();
             }
         }
+
+        private void labelSingIn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login newForm = new Login();
+            newForm.ShowDialog();
+            this.Close();
+        }
     }
 }
