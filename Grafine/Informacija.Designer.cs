@@ -29,6 +29,14 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.meniuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pradinisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.katalogasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pardavimaiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pirkimaiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.paskyraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.informacijaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.atsijungtiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxCompanyName = new System.Windows.Forms.TextBox();
@@ -46,14 +54,6 @@
             this.textBoxOldPass = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.meniuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pradinisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.katalogasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pardavimaiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pirkimaiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.paskyraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.informacijaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.atsijungtiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.textBoxUserName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -73,6 +73,82 @@
             this.menuStrip1.Size = new System.Drawing.Size(647, 79);
             this.menuStrip1.TabIndex = 6;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // meniuToolStripMenuItem
+            // 
+            this.meniuToolStripMenuItem.BackColor = System.Drawing.Color.DimGray;
+            this.meniuToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.meniuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.pradinisToolStripMenuItem,
+            this.katalogasToolStripMenuItem,
+            this.pardavimaiToolStripMenuItem,
+            this.pirkimaiToolStripMenuItem});
+            this.meniuToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
+            this.meniuToolStripMenuItem.Image = global::Grafine.Properties.Resources.icon_128x128;
+            this.meniuToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.meniuToolStripMenuItem.Name = "meniuToolStripMenuItem";
+            this.meniuToolStripMenuItem.Size = new System.Drawing.Size(72, 75);
+            // 
+            // pradinisToolStripMenuItem
+            // 
+            this.pradinisToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.pradinisToolStripMenuItem.Name = "pradinisToolStripMenuItem";
+            this.pradinisToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.pradinisToolStripMenuItem.Text = "Pradinis";
+            // 
+            // katalogasToolStripMenuItem
+            // 
+            this.katalogasToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.katalogasToolStripMenuItem.Name = "katalogasToolStripMenuItem";
+            this.katalogasToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.katalogasToolStripMenuItem.Text = "Katalogas";
+            this.katalogasToolStripMenuItem.Click += new System.EventHandler(this.katalogasToolStripMenuItem_Click);
+            // 
+            // pardavimaiToolStripMenuItem
+            // 
+            this.pardavimaiToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.pardavimaiToolStripMenuItem.Name = "pardavimaiToolStripMenuItem";
+            this.pardavimaiToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.pardavimaiToolStripMenuItem.Text = "Pardavimai";
+            // 
+            // pirkimaiToolStripMenuItem
+            // 
+            this.pirkimaiToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.pirkimaiToolStripMenuItem.Name = "pirkimaiToolStripMenuItem";
+            this.pirkimaiToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.pirkimaiToolStripMenuItem.Text = "Pirkimai";
+            // 
+            // paskyraToolStripMenuItem
+            // 
+            this.paskyraToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.paskyraToolStripMenuItem.BackColor = System.Drawing.Color.DimGray;
+            this.paskyraToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.informacijaToolStripMenuItem,
+            this.atsijungtiToolStripMenuItem});
+            this.paskyraToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
+            this.paskyraToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.paskyraToolStripMenuItem.Image = global::Grafine.Properties.Resources.User_icon_2_svg;
+            this.paskyraToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.paskyraToolStripMenuItem.Name = "paskyraToolStripMenuItem";
+            this.paskyraToolStripMenuItem.Size = new System.Drawing.Size(70, 75);
+            this.paskyraToolStripMenuItem.Text = "Paskyra";
+            this.paskyraToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // informacijaToolStripMenuItem
+            // 
+            this.informacijaToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.informacijaToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
+            this.informacijaToolStripMenuItem.Name = "informacijaToolStripMenuItem";
+            this.informacijaToolStripMenuItem.Size = new System.Drawing.Size(156, 26);
+            this.informacijaToolStripMenuItem.Text = "Informacija";
+            // 
+            // atsijungtiToolStripMenuItem
+            // 
+            this.atsijungtiToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.atsijungtiToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
+            this.atsijungtiToolStripMenuItem.Name = "atsijungtiToolStripMenuItem";
+            this.atsijungtiToolStripMenuItem.Size = new System.Drawing.Size(156, 26);
+            this.atsijungtiToolStripMenuItem.Text = "Atsijungti";
             // 
             // label1
             // 
@@ -240,81 +316,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(647, 74);
             this.panel2.TabIndex = 29;
-            // 
-            // meniuToolStripMenuItem
-            // 
-            this.meniuToolStripMenuItem.BackColor = System.Drawing.Color.DimGray;
-            this.meniuToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.meniuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.pradinisToolStripMenuItem,
-            this.katalogasToolStripMenuItem,
-            this.pardavimaiToolStripMenuItem,
-            this.pirkimaiToolStripMenuItem});
-            this.meniuToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.meniuToolStripMenuItem.Image = global::Grafine.Properties.Resources.icon_128x128;
-            this.meniuToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.meniuToolStripMenuItem.Name = "meniuToolStripMenuItem";
-            this.meniuToolStripMenuItem.Size = new System.Drawing.Size(72, 75);
-            // 
-            // pradinisToolStripMenuItem
-            // 
-            this.pradinisToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.pradinisToolStripMenuItem.Name = "pradinisToolStripMenuItem";
-            this.pradinisToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
-            this.pradinisToolStripMenuItem.Text = "Pradinis";
-            // 
-            // katalogasToolStripMenuItem
-            // 
-            this.katalogasToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.katalogasToolStripMenuItem.Name = "katalogasToolStripMenuItem";
-            this.katalogasToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
-            this.katalogasToolStripMenuItem.Text = "Katalogas";
-            // 
-            // pardavimaiToolStripMenuItem
-            // 
-            this.pardavimaiToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.pardavimaiToolStripMenuItem.Name = "pardavimaiToolStripMenuItem";
-            this.pardavimaiToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
-            this.pardavimaiToolStripMenuItem.Text = "Pardavimai";
-            // 
-            // pirkimaiToolStripMenuItem
-            // 
-            this.pirkimaiToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.pirkimaiToolStripMenuItem.Name = "pirkimaiToolStripMenuItem";
-            this.pirkimaiToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
-            this.pirkimaiToolStripMenuItem.Text = "Pirkimai";
-            // 
-            // paskyraToolStripMenuItem
-            // 
-            this.paskyraToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.paskyraToolStripMenuItem.BackColor = System.Drawing.Color.DimGray;
-            this.paskyraToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.informacijaToolStripMenuItem,
-            this.atsijungtiToolStripMenuItem});
-            this.paskyraToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.paskyraToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.paskyraToolStripMenuItem.Image = global::Grafine.Properties.Resources.User_icon_2_svg;
-            this.paskyraToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.paskyraToolStripMenuItem.Name = "paskyraToolStripMenuItem";
-            this.paskyraToolStripMenuItem.Size = new System.Drawing.Size(70, 75);
-            this.paskyraToolStripMenuItem.Text = "Paskyra";
-            this.paskyraToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
-            // informacijaToolStripMenuItem
-            // 
-            this.informacijaToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.informacijaToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.informacijaToolStripMenuItem.Name = "informacijaToolStripMenuItem";
-            this.informacijaToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
-            this.informacijaToolStripMenuItem.Text = "Informacija";
-            // 
-            // atsijungtiToolStripMenuItem
-            // 
-            this.atsijungtiToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.atsijungtiToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.atsijungtiToolStripMenuItem.Name = "atsijungtiToolStripMenuItem";
-            this.atsijungtiToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
-            this.atsijungtiToolStripMenuItem.Text = "Atsijungti";
             // 
             // panel1
             // 
