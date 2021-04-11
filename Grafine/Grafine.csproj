@@ -147,6 +147,12 @@
     <Compile Include="Registration.Designer.cs">
       <DependentUpon>Registration.cs</DependentUpon>
     </Compile>
+    <Compile Include="RegistrationCompany.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistrationCompany.Designer.cs">
+      <DependentUpon>RegistrationCompany.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utils\Database.cs" />
     <EmbeddedResource Include="Informacija.resx">
       <DependentUpon>Informacija.cs</DependentUpon>
@@ -176,6 +182,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Registration.resx">
       <DependentUpon>Registration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistrationCompany.resx">
+      <DependentUpon>RegistrationCompany.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

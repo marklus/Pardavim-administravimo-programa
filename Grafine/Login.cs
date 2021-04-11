@@ -105,5 +105,23 @@ namespace Grafine
             newForm.ShowDialog();
             this.Close();
         }
+
+        private void label2RegistrationCompany_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            RegistrationCompany newForm = new RegistrationCompany();
+            newForm.ShowDialog();
+            this.Close();
+        }
+
+        private void label2RegistrationCompany_MouseEnter(object sender, EventArgs e)
+        {
+            label2RegistrationCompany.ForeColor = Color.White;
+        }
+
+        private void label2RegistrationCompany_MouseLeave(object sender, EventArgs e)
+        {
+            label2RegistrationCompany.ForeColor = Color.Black;
+        }
     }
 }
