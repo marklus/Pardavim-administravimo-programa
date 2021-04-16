@@ -92,6 +92,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddNewParts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddNewParts.Designer.cs">
+      <DependentUpon>AddNewParts.cs</DependentUpon>
+    </Compile>
     <Compile Include="Informacija.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,7 +159,16 @@
     <Compile Include="RegistrationCompany.Designer.cs">
       <DependentUpon>RegistrationCompany.cs</DependentUpon>
     </Compile>
+    <Compile Include="RegistrationStorehouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistrationStorehouse.Designer.cs">
+      <DependentUpon>RegistrationStorehouse.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utils\Database.cs" />
+    <EmbeddedResource Include="AddNewParts.resx">
+      <DependentUpon>AddNewParts.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Informacija.resx">
       <DependentUpon>Informacija.cs</DependentUpon>
     </EmbeddedResource>
@@ -185,6 +200,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RegistrationCompany.resx">
       <DependentUpon>RegistrationCompany.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistrationStorehouse.resx">
+      <DependentUpon>RegistrationStorehouse.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

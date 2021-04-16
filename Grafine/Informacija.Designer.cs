@@ -139,7 +139,7 @@
             this.informacijaToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
             this.informacijaToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.informacijaToolStripMenuItem.Name = "informacijaToolStripMenuItem";
-            this.informacijaToolStripMenuItem.Size = new System.Drawing.Size(156, 26);
+            this.informacijaToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.informacijaToolStripMenuItem.Text = "Informacija";
             // 
             // atsijungtiToolStripMenuItem
@@ -147,7 +147,7 @@
             this.atsijungtiToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
             this.atsijungtiToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.atsijungtiToolStripMenuItem.Name = "atsijungtiToolStripMenuItem";
-            this.atsijungtiToolStripMenuItem.Size = new System.Drawing.Size(156, 26);
+            this.atsijungtiToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.atsijungtiToolStripMenuItem.Text = "Atsijungti";
             // 
             // label1

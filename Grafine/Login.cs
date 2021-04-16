@@ -21,7 +21,9 @@ namespace Grafine
 
             this.textBoxPassword.AutoSize = false;
             this.textBoxPassword.Size = new Size(this.textBoxPassword.Size.Width, 40);
+            string kazkas = "kazkas";
         }
+
 
         private void labelClose_MouseEnter(object sender, EventArgs e)
         {

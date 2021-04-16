@@ -17,9 +17,19 @@ namespace Grafine
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)//add new part
         {
+            AddNewParts newForm = new AddNewParts();
+            newForm.ShowDialog();
+            this.Close();
+        }
 
+        private void back_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Main newForm = new Main();
+            newForm.ShowDialog();
+            this.Close();
         }
     }
 }
