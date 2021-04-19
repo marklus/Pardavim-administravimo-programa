@@ -190,7 +190,10 @@
             this.informacijaToolStripMenuItem,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.įmonėToolStripMenuItem,
+=======
+>>>>>>> parent of b175713 (Pridėtas sandėlių kūrimas  bei mašinos dalių pridėjimas bei keletas gryžimo funkcijų bei patikrų)
 =======
 >>>>>>> parent of b175713 (Pridėtas sandėlių kūrimas  bei mašinos dalių pridėjimas bei keletas gryžimo funkcijų bei patikrų)
 =======
@@ -295,6 +298,9 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Pagrindinis";
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of b175713 (Pridėtas sandėlių kūrimas  bei mašinos dalių pridėjimas bei keletas gryžimo funkcijų bei patikrų)
+=======
 >>>>>>> parent of b175713 (Pridėtas sandėlių kūrimas  bei mašinos dalių pridėjimas bei keletas gryžimo funkcijų bei patikrų)
 =======
 >>>>>>> parent of b175713 (Pridėtas sandėlių kūrimas  bei mašinos dalių pridėjimas bei keletas gryžimo funkcijų bei patikrų)
@@ -349,6 +355,9 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of b175713 (Pridėtas sandėlių kūrimas  bei mašinos dalių pridėjimas bei keletas gryžimo funkcijų bei patikrų)
+=======
 >>>>>>> parent of b175713 (Pridėtas sandėlių kūrimas  bei mašinos dalių pridėjimas bei keletas gryžimo funkcijų bei patikrų)
 =======
 >>>>>>> parent of b175713 (Pridėtas sandėlių kūrimas  bei mašinos dalių pridėjimas bei keletas gryžimo funkcijų bei patikrų)
