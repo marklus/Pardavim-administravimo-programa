@@ -34,12 +34,13 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.PridėtiNaują = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.back = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.textBoxList = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -99,19 +100,20 @@
             this.button1.TabIndex = 6;
             this.button1.Text = "Koreguoti katalogą";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // PridėtiNaują
+            // button2
             // 
-            this.PridėtiNaują.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.PridėtiNaują.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.PridėtiNaują.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.PridėtiNaują.Location = new System.Drawing.Point(12, 386);
-            this.PridėtiNaują.Name = "PridėtiNaują";
-            this.PridėtiNaują.Size = new System.Drawing.Size(133, 52);
-            this.PridėtiNaują.TabIndex = 7;
-            this.PridėtiNaują.Text = "Pridėti naują";
-            this.PridėtiNaują.UseVisualStyleBackColor = false;
-            this.PridėtiNaują.Click += new System.EventHandler(this.button2_Click);
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
+            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button2.Location = new System.Drawing.Point(12, 386);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(133, 52);
+            this.button2.TabIndex = 7;
+            this.button2.Text = "Pridėti naują";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label3
             // 
@@ -146,19 +148,20 @@
             this.button4.TabIndex = 10;
             this.button4.Text = "Atstatyti";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // back
+            // button5
             // 
-            this.back.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.back.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.back.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.back.Location = new System.Drawing.Point(680, 386);
-            this.back.Name = "back";
-            this.back.Size = new System.Drawing.Size(108, 52);
-            this.back.TabIndex = 11;
-            this.back.Text = "Grįžti";
-            this.back.UseVisualStyleBackColor = false;
-            this.back.Click += new System.EventHandler(this.back_Click);
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
+            this.button5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button5.Location = new System.Drawing.Point(680, 386);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(108, 52);
+            this.button5.TabIndex = 11;
+            this.button5.Text = "Grįžti";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // checkedListBox1
             // 
@@ -168,18 +171,28 @@
             this.checkedListBox1.Size = new System.Drawing.Size(134, 19);
             this.checkedListBox1.TabIndex = 12;
             // 
+            // textBoxList
+            // 
+            this.textBoxList.Location = new System.Drawing.Point(12, 81);
+            this.textBoxList.Multiline = true;
+            this.textBoxList.Name = "textBoxList";
+            this.textBoxList.ReadOnly = true;
+            this.textBoxList.Size = new System.Drawing.Size(776, 299);
+            this.textBoxList.TabIndex = 13;
+            // 
             // Katalogas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(812, 450);
+            this.Controls.Add(this.textBoxList);
             this.Controls.Add(this.checkedListBox1);
-            this.Controls.Add(this.back);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.PridėtiNaują);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.comboBox1);
@@ -203,11 +216,12 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button PridėtiNaują;
+        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button back;
+        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.TextBox textBoxList;
     }
 }

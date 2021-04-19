@@ -31,17 +31,27 @@ namespace Grafine
             StreamReader input = new StreamReader("logins.txt");
             string usernameInternal = input.ReadLine();
             input.Close();
+            if(oldpass != null && oldpass != "")
+            {
+                Database.Update($"UPDATE dalysadmin.vartotojai SET vardas='{username}', elPastas='{email}', telNr = '{phone}', imonesPavad = '{company}' WHERE vardas='{usernameInternal}' AND slaptazodis = '{oldpass}';");
+                Database.Close();
 
-            Database.Update($"UPDATE dalysadmin.vartotojai SET vardas='{username}', elPastas='{email}', telNr = '{phone}', imonesPavad = '{company}' WHERE vardas='{usernameInternal}' AND slaptazodis = '{oldpass}';");
-            Database.Close();
+                StreamWriter clear = new StreamWriter("logins.txt");
+                clear.Close();
 
-            StreamWriter clear = new StreamWriter("logins.txt");
-            clear.Close();
+                this.Hide();
+                Login newForm = new Login();
+                newForm.ShowDialog();
+                this.Close();
+            }
+            else
+            {
+                popup newForm = new popup("Įveskite savo slaptažodį.");
+                newForm.ShowDialog();
+            }
+           
 
-            this.Hide();
-            Login newForm = new Login();
-            newForm.ShowDialog();
-            this.Close();
+           
         }
 
         private void button2_Click(object sender, EventArgs e)

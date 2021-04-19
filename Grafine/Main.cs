@@ -44,13 +44,5 @@ namespace Grafine
             newForm.ShowDialog();
             this.Close();
         }
-
-        private void pridėtNaująSandėlįToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            RegistrationStorehouse newForm = new RegistrationStorehouse();
-            newForm.ShowDialog();
-            this.Close();
-        }
     }
 }
