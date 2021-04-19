@@ -74,7 +74,6 @@
             this.labelSingIn.Size = new System.Drawing.Size(94, 20);
             this.labelSingIn.TabIndex = 13;
             this.labelSingIn.Text = "Prisijungimas";
-            this.labelSingIn.Click += new System.EventHandler(this.labelSingIn_Click);
             this.labelSingIn.MouseEnter += new System.EventHandler(this.labelSingIn_MouseEnter);
             this.labelSingIn.MouseLeave += new System.EventHandler(this.labelSingIn_MouseLeave);
             // 
@@ -89,7 +88,6 @@
             this.buttonRegistr.TabIndex = 12;
             this.buttonRegistr.Text = "Užsiregistruoti";
             this.buttonRegistr.UseVisualStyleBackColor = false;
-            this.buttonRegistr.Click += new System.EventHandler(this.buttonRegistr_Click);
             // 
             // textBoxTel
             // 

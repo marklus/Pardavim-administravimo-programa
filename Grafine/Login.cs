@@ -1,7 +1,4 @@
 ﻿using System;
-using System.IO;
-using Grafine.Utils;
-using MySql.Data.MySqlClient;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -50,56 +47,8 @@ namespace Grafine
             labelRegistration.ForeColor = Color.Black;
         }
 
-        private void buttonLogin_Click(object sender, EventArgs e)
-        {
-            string userName = textBoxUserName.Text;
-            string password = textBoxPassword.Text;
-            int counter = 0;
-            Dictionary<string, string> output = new Dictionary<string, string>();
-            MySqlDataReader outputStream = Database.Select($"SELECT * FROM dalysadmin.vartotojai WHERE vardas ='{userName}' AND slaptazodis ='{password}';");
-            while (outputStream.Read())
-            {
-                counter++;
-                Console.WriteLine(outputStream["id"] + " " + outputStream["vardas"] + " " + outputStream["slaptazodis"]);
-                output.Add(outputStream["vardas"].ToString(), outputStream["slaptazodis"].ToString());
 
-            }
-            Database.Close();
-            if (counter == 1)
-            {
-                if (output.ElementAt(0).Key == userName && output.ElementAt(0).Value == password)
-                {
-                    StreamWriter activate = new StreamWriter("logins.txt");
-                    activate.WriteLine(userName);
-                    activate.Close();
-
-                    //Console.WriteLine("pavyko");
-                    this.Hide();
-                    Main newForm = new Main();
-                    newForm.ShowDialog();
-                    this.Close();
-                }
-                else
-                {
-                    popup newForm = new popup("Neteisingas slaptažodis arba prisijungimo vardas.");
-                    newForm.ShowDialog();
-                    //Console.WriteLine("nepavyko");
-                }
-            }
-            else if (counter == 0)
-            {
-                popup newForm = new popup("Prašau įveskite tinkamą vartotojo vardą ir slaptažodį.");
-                newForm.ShowDialog();
-                Console.WriteLine($"counter = {counter}");
-            }
-            else
-            {
-                popup newForm = new popup("Duplikuotos paskyros. Prašau susisiekite su administratoriumi.");
-                newForm.ShowDialog();
-                Console.WriteLine($"counter = {counter}");
-            }
-        }
-
+<<<<<<< HEAD
         private void labelRegistration_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -125,5 +74,7 @@ namespace Grafine
         {
             label2RegistrationCompany.ForeColor = Color.Black;
         }
+=======
+>>>>>>> parent of f41674f (Merge pull request #5 from tomacatx2/main)
     }
 }

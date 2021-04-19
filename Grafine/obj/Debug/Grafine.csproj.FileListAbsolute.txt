@@ -14,6 +14,7 @@ C:\Users\Andzelika\OneDrive - Kaunas University of Technology\4 semestras\Progra
 C:\Users\Andzelika\OneDrive - Kaunas University of Technology\4 semestras\Programavimo inžinerija\Aplication\Grafine\obj\Debug\Grafine.Product.resources
 C:\Users\Andzelika\OneDrive - Kaunas University of Technology\4 semestras\Programavimo inžinerija\Aplication\Grafine\obj\Debug\Grafine.Informacija.resources
 C:\Users\Andzelika\OneDrive - Kaunas University of Technology\4 semestras\Programavimo inžinerija\Aplication\Grafine\obj\Debug\Grafine.Katalogo_koregavimas.resources
+<<<<<<< HEAD
 C:\Users\Tom\Desktop\grafine 2\Grafine\bin\Debug\Grafine.exe.config
 C:\Users\Tom\Desktop\grafine 2\Grafine\bin\Debug\Grafine.exe
 C:\Users\Tom\Desktop\grafine 2\Grafine\bin\Debug\Grafine.pdb
@@ -293,3 +294,6 @@ C:\Users\Tom\Documents\GitHub\Pardavim-administravimo-programa\Grafine\obj\Debug
 C:\Users\Tom\Documents\GitHub\Pardavim-administravimo-programa\Grafine\obj\Debug\Grafine.pdb
 C:\Users\Tom\Documents\GitHub\Pardavim-administravimo-programa\Grafine\obj\Debug\Grafine.Katalogo_pridejimas.resources
 C:\Users\Tom\Documents\GitHub\Pardavim-administravimo-programa\Grafine\obj\Debug\Grafine.csprojAssemblyReference.cache
+=======
+C:\Users\Andzelika\OneDrive - Kaunas University of Technology\4 semestras\Programavimo inžinerija\Aplication\Grafine\obj\Debug\Grafine.Imone.resources
+>>>>>>> parent of f41674f (Merge pull request #5 from tomacatx2/main)

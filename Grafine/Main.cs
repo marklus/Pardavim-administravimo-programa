@@ -1,5 +1,4 @@
 ﻿using System;
-using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,6 +17,7 @@ namespace Grafine
             InitializeComponent();
         }
 
+<<<<<<< HEAD
         private void informacijaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -44,5 +44,7 @@ namespace Grafine
             newForm.ShowDialog();
             this.Close();
         }
+=======
+>>>>>>> parent of f41674f (Merge pull request #5 from tomacatx2/main)
     }
 }

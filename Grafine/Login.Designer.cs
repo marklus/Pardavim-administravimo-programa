@@ -86,7 +86,6 @@
             this.labelRegistration.Size = new System.Drawing.Size(84, 20);
             this.labelRegistration.TabIndex = 7;
             this.labelRegistration.Text = "Registruotis";
-            this.labelRegistration.Click += new System.EventHandler(this.labelRegistration_Click);
             this.labelRegistration.MouseEnter += new System.EventHandler(this.labelRegistration_MouseEnter);
             this.labelRegistration.MouseLeave += new System.EventHandler(this.labelRegistration_MouseLeave);
             // 
@@ -101,7 +100,6 @@
             this.buttonLogin.TabIndex = 6;
             this.buttonLogin.Text = "Prisijungti";
             this.buttonLogin.UseVisualStyleBackColor = false;
-            this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click);
             // 
             // textBoxPassword
             // 
