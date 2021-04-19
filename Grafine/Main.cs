@@ -44,7 +44,10 @@ namespace Grafine
             newForm.ShowDialog();
             this.Close();
         }
+<<<<<<< HEAD
 =======
 >>>>>>> parent of f41674f (Merge pull request #5 from tomacatx2/main)
+=======
+>>>>>>> parent of b175713 (Pridėtas sandėlių kūrimas  bei mašinos dalių pridėjimas bei keletas gryžimo funkcijų bei patikrų)
     }
 }

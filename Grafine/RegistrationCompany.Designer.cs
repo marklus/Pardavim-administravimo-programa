@@ -102,7 +102,6 @@
             this.Controls.Add(this.textBoxCompName);
             this.Name = "RegistrationCompany";
             this.Text = "RegistrationCompany";
-            this.Load += new System.EventHandler(this.RegistrationCompany_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

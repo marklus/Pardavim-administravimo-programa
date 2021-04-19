@@ -56,10 +56,5 @@ namespace Grafine
             newForm.ShowDialog();
             this.Close();
         }
-
-        private void RegistrationCompany_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
