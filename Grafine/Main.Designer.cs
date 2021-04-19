@@ -81,28 +81,29 @@
             // 
             this.pradinisToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
             this.pradinisToolStripMenuItem.Name = "pradinisToolStripMenuItem";
-            this.pradinisToolStripMenuItem.Size = new System.Drawing.Size(157, 26);
+            this.pradinisToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.pradinisToolStripMenuItem.Text = "Pradinis";
             // 
             // katalogasToolStripMenuItem
             // 
             this.katalogasToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
             this.katalogasToolStripMenuItem.Name = "katalogasToolStripMenuItem";
-            this.katalogasToolStripMenuItem.Size = new System.Drawing.Size(157, 26);
+            this.katalogasToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.katalogasToolStripMenuItem.Text = "Katalogas";
+            this.katalogasToolStripMenuItem.Click += new System.EventHandler(this.katalogasToolStripMenuItem_Click);
             // 
             // pardavimaiToolStripMenuItem
             // 
             this.pardavimaiToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
             this.pardavimaiToolStripMenuItem.Name = "pardavimaiToolStripMenuItem";
-            this.pardavimaiToolStripMenuItem.Size = new System.Drawing.Size(157, 26);
+            this.pardavimaiToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.pardavimaiToolStripMenuItem.Text = "Pardavimai";
             // 
             // pirkimaiToolStripMenuItem
             // 
             this.pirkimaiToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
             this.pirkimaiToolStripMenuItem.Name = "pirkimaiToolStripMenuItem";
-            this.pirkimaiToolStripMenuItem.Size = new System.Drawing.Size(157, 26);
+            this.pirkimaiToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.pirkimaiToolStripMenuItem.Text = "Pirkimai";
             // 
             // paskyraToolStripMenuItem
@@ -126,7 +127,7 @@
             this.informacijaToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
             this.informacijaToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.informacijaToolStripMenuItem.Name = "informacijaToolStripMenuItem";
-            this.informacijaToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.informacijaToolStripMenuItem.Size = new System.Drawing.Size(156, 26);
             this.informacijaToolStripMenuItem.Text = "Informacija";
             this.informacijaToolStripMenuItem.Click += new System.EventHandler(this.informacijaToolStripMenuItem_Click);
             // 
@@ -135,7 +136,7 @@
             this.atsijungtiToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
             this.atsijungtiToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.atsijungtiToolStripMenuItem.Name = "atsijungtiToolStripMenuItem";
-            this.atsijungtiToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.atsijungtiToolStripMenuItem.Size = new System.Drawing.Size(156, 26);
             this.atsijungtiToolStripMenuItem.Text = "Atsijungti";
             this.atsijungtiToolStripMenuItem.Click += new System.EventHandler(this.atsijungtiToolStripMenuItem_Click);
             // 
