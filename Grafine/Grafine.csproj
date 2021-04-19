@@ -116,6 +116,12 @@
     <Compile Include="Katalogo koregavimas.Designer.cs">
       <DependentUpon>Katalogo koregavimas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Katalogo salinimas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Katalogo salinimas.Designer.cs">
+      <DependentUpon>Katalogo salinimas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,6 +171,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Katalogo koregavimas.resx">
       <DependentUpon>Katalogo koregavimas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Katalogo salinimas.resx">
+      <DependentUpon>Katalogo salinimas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

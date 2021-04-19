@@ -79,6 +79,12 @@ namespace Grafine
             Katalogo_koregavimas newForm = new Katalogo_koregavimas();
             newForm.ShowDialog();
         }
+
+        private void buttonRemove_Click(object sender, EventArgs e)
+        {
+            Katalogo_salinimas newForm = new Katalogo_salinimas();
+            newForm.ShowDialog();
+        }
     }
 }
 

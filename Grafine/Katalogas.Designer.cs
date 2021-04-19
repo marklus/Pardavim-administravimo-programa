@@ -41,6 +41,7 @@
             this.button5 = new System.Windows.Forms.Button();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.textBoxList = new System.Windows.Forms.TextBox();
+            this.buttonRemove = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -180,12 +181,26 @@
             this.textBoxList.Size = new System.Drawing.Size(776, 299);
             this.textBoxList.TabIndex = 13;
             // 
+            // buttonRemove
+            // 
+            this.buttonRemove.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.buttonRemove.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
+            this.buttonRemove.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonRemove.Location = new System.Drawing.Point(355, 386);
+            this.buttonRemove.Name = "buttonRemove";
+            this.buttonRemove.Size = new System.Drawing.Size(178, 52);
+            this.buttonRemove.TabIndex = 14;
+            this.buttonRemove.Text = "Šalinti iš katalogo";
+            this.buttonRemove.UseVisualStyleBackColor = false;
+            this.buttonRemove.Click += new System.EventHandler(this.buttonRemove_Click);
+            // 
             // Katalogas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(812, 450);
+            this.Controls.Add(this.buttonRemove);
             this.Controls.Add(this.textBoxList);
             this.Controls.Add(this.checkedListBox1);
             this.Controls.Add(this.button5);
@@ -223,5 +238,6 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.CheckedListBox checkedListBox1;
         private System.Windows.Forms.TextBox textBoxList;
+        private System.Windows.Forms.Button buttonRemove;
     }
 }
