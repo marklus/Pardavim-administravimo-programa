@@ -22,6 +22,7 @@ namespace Grafine
 
         private void button2_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             Katalogo_pridejimas newForm = new Katalogo_pridejimas();
             newForm.ShowDialog();
         }
@@ -32,6 +33,9 @@ namespace Grafine
             Main newForm = new Main();
             newForm.ShowDialog();
             this.Close();
+=======
+
+>>>>>>> parent of b175713 (Pridėtas sandėlių kūrimas  bei mašinos dalių pridėjimas bei keletas gryžimo funkcijų bei patikrų)
         }
 
         private void button4_Click(object sender, EventArgs e)

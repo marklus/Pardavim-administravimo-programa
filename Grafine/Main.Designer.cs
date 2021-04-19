@@ -189,7 +189,10 @@
             this.paskyraToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.informacijaToolStripMenuItem,
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.įmonėToolStripMenuItem,
+=======
+>>>>>>> parent of b175713 (Pridėtas sandėlių kūrimas  bei mašinos dalių pridėjimas bei keletas gryžimo funkcijų bei patikrų)
 =======
 >>>>>>> parent of b175713 (Pridėtas sandėlių kūrimas  bei mašinos dalių pridėjimas bei keletas gryžimo funkcijų bei patikrų)
             this.atsijungtiToolStripMenuItem});
@@ -291,6 +294,9 @@
             this.label1.Size = new System.Drawing.Size(284, 55);
             this.label1.TabIndex = 5;
             this.label1.Text = "Pagrindinis";
+<<<<<<< HEAD
+>>>>>>> parent of b175713 (Pridėtas sandėlių kūrimas  bei mašinos dalių pridėjimas bei keletas gryžimo funkcijų bei patikrų)
+=======
 >>>>>>> parent of b175713 (Pridėtas sandėlių kūrimas  bei mašinos dalių pridėjimas bei keletas gryžimo funkcijų bei patikrų)
             // 
             // Main
@@ -342,6 +348,9 @@
         private System.Windows.Forms.ToolStripMenuItem pradinisToolStripMenuItem;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
+<<<<<<< HEAD
+>>>>>>> parent of b175713 (Pridėtas sandėlių kūrimas  bei mašinos dalių pridėjimas bei keletas gryžimo funkcijų bei patikrų)
+=======
 >>>>>>> parent of b175713 (Pridėtas sandėlių kūrimas  bei mašinos dalių pridėjimas bei keletas gryžimo funkcijų bei patikrų)
     }
 }

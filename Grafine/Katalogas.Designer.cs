@@ -148,7 +148,10 @@
             this.button4.TabIndex = 10;
             this.button4.Text = "Atstatyti";
             this.button4.UseVisualStyleBackColor = false;
+<<<<<<< HEAD
             this.button4.Click += new System.EventHandler(this.button4_Click);
+=======
+>>>>>>> parent of b175713 (Pridėtas sandėlių kūrimas  bei mašinos dalių pridėjimas bei keletas gryžimo funkcijų bei patikrų)
             // 
             // button5
             // 
@@ -162,7 +165,10 @@
             this.button5.Text = "Grįžti";
             this.button5.UseVisualStyleBackColor = false;
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.button5.Click += new System.EventHandler(this.button5_Click);
+=======
+>>>>>>> parent of b175713 (Pridėtas sandėlių kūrimas  bei mašinos dalių pridėjimas bei keletas gryžimo funkcijų bei patikrų)
 =======
 >>>>>>> parent of b175713 (Pridėtas sandėlių kūrimas  bei mašinos dalių pridėjimas bei keletas gryžimo funkcijų bei patikrų)
             // 
