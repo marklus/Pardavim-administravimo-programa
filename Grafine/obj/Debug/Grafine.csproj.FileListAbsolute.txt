@@ -441,6 +441,9 @@ C:\Users\Martynas\Documents\GitHub\Pardavim-administravimo-programa\Grafine\obj\
 C:\Users\Martynas\Documents\GitHub\Pardavim-administravimo-programa\Grafine\obj\Debug\Grafine.RegistrationCompany.resources
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of b175713 (Pridėtas sandėlių kūrimas  bei mašinos dalių pridėjimas bei keletas gryžimo funkcijų bei patikrų)
+=======
 >>>>>>> parent of b175713 (Pridėtas sandėlių kūrimas  bei mašinos dalių pridėjimas bei keletas gryžimo funkcijų bei patikrų)
 =======
 >>>>>>> parent of b175713 (Pridėtas sandėlių kūrimas  bei mašinos dalių pridėjimas bei keletas gryžimo funkcijų bei patikrų)

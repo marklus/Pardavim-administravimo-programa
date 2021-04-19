@@ -50,6 +50,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <Compile Include="AddNewParts.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +64,8 @@
       <DependentUpon>Imone.cs</DependentUpon>
 >>>>>>> parent of f41674f (Merge pull request #5 from tomacatx2/main)
     </Compile>
+=======
+>>>>>>> parent of b175713 (Pridėtas sandėlių kūrimas  bei mašinos dalių pridėjimas bei keletas gryžimo funkcijų bei patikrų)
 =======
 >>>>>>> parent of b175713 (Pridėtas sandėlių kūrimas  bei mašinos dalių pridėjimas bei keletas gryžimo funkcijų bei patikrų)
 =======
@@ -135,6 +138,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <EmbeddedResource Include="AddNewParts.resx">
       <DependentUpon>AddNewParts.cs</DependentUpon>
 =======
@@ -142,6 +146,8 @@
       <DependentUpon>Imone.cs</DependentUpon>
 >>>>>>> parent of f41674f (Merge pull request #5 from tomacatx2/main)
     </EmbeddedResource>
+=======
+>>>>>>> parent of b175713 (Pridėtas sandėlių kūrimas  bei mašinos dalių pridėjimas bei keletas gryžimo funkcijų bei patikrų)
 =======
 >>>>>>> parent of b175713 (Pridėtas sandėlių kūrimas  bei mašinos dalių pridėjimas bei keletas gryžimo funkcijų bei patikrų)
 =======
