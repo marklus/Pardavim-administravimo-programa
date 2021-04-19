@@ -40,6 +40,7 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.textBoxList = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -99,6 +100,7 @@
             this.button1.TabIndex = 6;
             this.button1.Text = "Koreguoti katalogą";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -111,6 +113,7 @@
             this.button2.TabIndex = 7;
             this.button2.Text = "Pridėti naują";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label3
             // 
@@ -145,6 +148,7 @@
             this.button4.TabIndex = 10;
             this.button4.Text = "Atstatyti";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
@@ -157,6 +161,7 @@
             this.button5.TabIndex = 11;
             this.button5.Text = "Grįžti";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // checkedListBox1
             // 
@@ -166,12 +171,22 @@
             this.checkedListBox1.Size = new System.Drawing.Size(134, 19);
             this.checkedListBox1.TabIndex = 12;
             // 
+            // textBoxList
+            // 
+            this.textBoxList.Location = new System.Drawing.Point(12, 81);
+            this.textBoxList.Multiline = true;
+            this.textBoxList.Name = "textBoxList";
+            this.textBoxList.ReadOnly = true;
+            this.textBoxList.Size = new System.Drawing.Size(776, 299);
+            this.textBoxList.TabIndex = 13;
+            // 
             // Katalogas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(812, 450);
+            this.Controls.Add(this.textBoxList);
             this.Controls.Add(this.checkedListBox1);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
@@ -207,5 +222,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.TextBox textBoxList;
     }
 }

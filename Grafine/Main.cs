@@ -36,5 +36,13 @@ namespace Grafine
             newForm.ShowDialog();
             this.Close();
         }
+
+        private void katalogasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Katalogas newForm = new Katalogas();
+            newForm.ShowDialog();
+            this.Close();
+        }
     }
 }
