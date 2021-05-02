@@ -433,3 +433,5 @@ C:\Users\Martynas\Documents\GitHub\Pardavim-administravimo-programa\Grafine\obj\
 C:\Users\Martynas\Documents\GitHub\Pardavim-administravimo-programa\Grafine\obj\Debug\Grafine.csproj.CopyComplete
 C:\Users\Martynas\Documents\GitHub\Pardavim-administravimo-programa\Grafine\obj\Debug\Grafine.exe
 C:\Users\Martynas\Documents\GitHub\Pardavim-administravimo-programa\Grafine\obj\Debug\Grafine.pdb
+C:\Users\Martynas\Documents\GitHub\Pardavim-administravimo-programa\Grafine\obj\Debug\Grafine.RegistrationStorehouse.resources
+C:\Users\Martynas\Documents\GitHub\Pardavim-administravimo-programa\Grafine\obj\Debug\Grafine.DeletingStorehouse.resources

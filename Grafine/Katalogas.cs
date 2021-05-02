@@ -79,6 +79,18 @@ namespace Grafine
             Katalogo_koregavimas newForm = new Katalogo_koregavimas();
             newForm.ShowDialog();
         }
+
+        private void deleteStorehouse_Click(object sender, EventArgs e)
+        {
+            DeletingStorehouse newForm = new DeletingStorehouse();
+            newForm.ShowDialog();
+        }
+
+        private void createStorehouse_Click_1(object sender, EventArgs e)
+        {
+            RegistrationStorehouse newForm = new RegistrationStorehouse();
+            newForm.ShowDialog();
+        }
     }
 }
 

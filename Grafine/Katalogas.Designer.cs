@@ -41,6 +41,8 @@
             this.button5 = new System.Windows.Forms.Button();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.textBoxList = new System.Windows.Forms.TextBox();
+            this.createStorehouse = new System.Windows.Forms.Button();
+            this.deleteStorehouse = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -180,12 +182,40 @@
             this.textBoxList.Size = new System.Drawing.Size(776, 299);
             this.textBoxList.TabIndex = 13;
             // 
+            // createStorehouse
+            // 
+            this.createStorehouse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.createStorehouse.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
+            this.createStorehouse.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.createStorehouse.Location = new System.Drawing.Point(343, 386);
+            this.createStorehouse.Name = "createStorehouse";
+            this.createStorehouse.Size = new System.Drawing.Size(178, 52);
+            this.createStorehouse.TabIndex = 15;
+            this.createStorehouse.Text = "Sukurti Sandėlį";
+            this.createStorehouse.UseVisualStyleBackColor = false;
+            this.createStorehouse.Click += new System.EventHandler(this.createStorehouse_Click_1);
+            // 
+            // deleteStorehouse
+            // 
+            this.deleteStorehouse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.deleteStorehouse.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
+            this.deleteStorehouse.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.deleteStorehouse.Location = new System.Drawing.Point(527, 386);
+            this.deleteStorehouse.Name = "deleteStorehouse";
+            this.deleteStorehouse.Size = new System.Drawing.Size(98, 52);
+            this.deleteStorehouse.TabIndex = 16;
+            this.deleteStorehouse.Text = "Ištrinti Sandėlį";
+            this.deleteStorehouse.UseVisualStyleBackColor = false;
+            this.deleteStorehouse.Click += new System.EventHandler(this.deleteStorehouse_Click);
+            // 
             // Katalogas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(812, 450);
+            this.Controls.Add(this.deleteStorehouse);
+            this.Controls.Add(this.createStorehouse);
             this.Controls.Add(this.textBoxList);
             this.Controls.Add(this.checkedListBox1);
             this.Controls.Add(this.button5);
@@ -223,5 +253,7 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.CheckedListBox checkedListBox1;
         private System.Windows.Forms.TextBox textBoxList;
+        private System.Windows.Forms.Button createStorehouse;
+        private System.Windows.Forms.Button deleteStorehouse;
     }
 }

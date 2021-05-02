@@ -92,6 +92,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DeletingStorehouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeletingStorehouse.Designer.cs">
+      <DependentUpon>DeletingStorehouse.cs</DependentUpon>
+    </Compile>
     <Compile Include="Informacija.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,7 +159,16 @@
     <Compile Include="Registration.Designer.cs">
       <DependentUpon>Registration.cs</DependentUpon>
     </Compile>
+    <Compile Include="RegistrationStorehouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistrationStorehouse.Designer.cs">
+      <DependentUpon>RegistrationStorehouse.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utils\Database.cs" />
+    <EmbeddedResource Include="DeletingStorehouse.resx">
+      <DependentUpon>DeletingStorehouse.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Informacija.resx">
       <DependentUpon>Informacija.cs</DependentUpon>
     </EmbeddedResource>
@@ -185,6 +200,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Registration.resx">
       <DependentUpon>Registration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistrationStorehouse.resx">
+      <DependentUpon>RegistrationStorehouse.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
