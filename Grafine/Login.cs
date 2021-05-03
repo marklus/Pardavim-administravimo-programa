@@ -53,23 +53,26 @@ namespace Grafine
             string userName = textBoxUserName.Text;
             string password = textBoxPassword.Text;
             int counter = 0;
-            Dictionary<string, string> output = new Dictionary<string, string>();
+            List<Tuple<string, string, string>> output = new List<Tuple<string, string, string>>();
             MySqlDataReader outputStream = Database.Select($"SELECT * FROM dalysadmin.vartotojai WHERE vardas ='{userName}' AND slaptazodis ='{password}';");
             while (outputStream.Read())
             {
                 counter++;
-                Console.WriteLine(outputStream["id"] + " " + outputStream["vardas"] + " " + outputStream["slaptazodis"]);
-                output.Add(outputStream["vardas"].ToString(), outputStream["slaptazodis"].ToString());
+                //Console.WriteLine(outputStream["id"] + " " + outputStream["vardas"] + " " + outputStream["slaptazodis"]);
+                output.Add(new Tuple<string, string, string>(outputStream["vardas"].ToString(), outputStream["slaptazodis"].ToString(), outputStream["id"].ToString()));
+
 
             }
             Database.Close();
             if (counter == 1)
             {
-                if (output.ElementAt(0).Key == userName && output.ElementAt(0).Value == password)
+                if (output[0].Item1 == userName && output[0].Item2 == password)
                 {
-                    StreamWriter activate = new StreamWriter("logins.txt");
-                    activate.WriteLine(userName);
-                    activate.Close();
+                    //StreamWriter activate = new StreamWriter("logins.txt");
+                    Database.Activate(userName, output[0].Item3);
+                    //activate.WriteLine(userName);
+                    //activate.WriteLine(output[0].Item3);
+                    //activate.Close();
 
                     //Console.WriteLine("pavyko");
                     this.Hide();

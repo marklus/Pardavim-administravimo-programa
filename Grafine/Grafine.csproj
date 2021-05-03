@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{00FC3FF9-4B42-47E3-A8DC-9D1AB3096C79}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Exe</OutputType>
     <RootNamespace>Grafine</RootNamespace>
     <AssemblyName>Grafine</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
@@ -31,6 +31,9 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="BouncyCastle.Crypto, Version=1.8.5.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
@@ -140,6 +143,18 @@
     <Compile Include="popup.Designer.cs">
       <DependentUpon>popup.cs</DependentUpon>
     </Compile>
+    <Compile Include="PrekiuPirkimas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrekiuPirkimas.Designer.cs">
+      <DependentUpon>PrekiuPirkimas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrekiuSarasas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrekiuSarasas.Designer.cs">
+      <DependentUpon>PrekiuSarasas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Product.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,7 +174,27 @@
     <Compile Include="Registration.Designer.cs">
       <DependentUpon>Registration.cs</DependentUpon>
     </Compile>
+<<<<<<< Updated upstream
     <Compile Include="Utils\Database.cs" />
+=======
+    <Compile Include="SandelysRegistracija.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SandelysRegistracija.Designer.cs">
+      <DependentUpon>SandelysRegistracija.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SandelysSarasas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SandelysSarasas.Designer.cs">
+      <DependentUpon>SandelysSarasas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\Database.cs" />
+    <Compile Include="Utils\PartClass.cs" />
+    <EmbeddedResource Include="DeletingStorehouse.resx">
+      <DependentUpon>DeletingStorehouse.cs</DependentUpon>
+    </EmbeddedResource>
+>>>>>>> Stashed changes
     <EmbeddedResource Include="Informacija.resx">
       <DependentUpon>Informacija.cs</DependentUpon>
     </EmbeddedResource>
@@ -184,6 +219,12 @@
     <EmbeddedResource Include="popup.resx">
       <DependentUpon>popup.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PrekiuPirkimas.resx">
+      <DependentUpon>PrekiuPirkimas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrekiuSarasas.resx">
+      <DependentUpon>PrekiuSarasas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Product.resx">
       <DependentUpon>Product.cs</DependentUpon>
     </EmbeddedResource>
@@ -195,6 +236,15 @@
     <EmbeddedResource Include="Registration.resx">
       <DependentUpon>Registration.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< Updated upstream
+=======
+    <EmbeddedResource Include="SandelysRegistracija.resx">
+      <DependentUpon>SandelysRegistracija.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SandelysSarasas.resx">
+      <DependentUpon>SandelysSarasas.cs</DependentUpon>
+    </EmbeddedResource>
+>>>>>>> Stashed changes
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
