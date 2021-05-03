@@ -1,5 +1,0 @@
-admin
-<<<<<<< Updated upstream
-=======
-5
->>>>>>> Stashed changes

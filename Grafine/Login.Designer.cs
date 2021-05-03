@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label2RegistrationCompany = new System.Windows.Forms.Label();
             this.labelRegistration = new System.Windows.Forms.Label();
             this.buttonLogin = new System.Windows.Forms.Button();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
@@ -47,6 +48,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel1.Controls.Add(this.label2RegistrationCompany);
             this.panel1.Controls.Add(this.labelRegistration);
             this.panel1.Controls.Add(this.buttonLogin);
             this.panel1.Controls.Add(this.textBoxPassword);
@@ -60,17 +62,30 @@
             this.panel1.Size = new System.Drawing.Size(526, 342);
             this.panel1.TabIndex = 0;
             // 
+            // label2RegistrationCompany
+            // 
+            this.label2RegistrationCompany.AutoSize = true;
+            this.label2RegistrationCompany.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label2RegistrationCompany.Font = new System.Drawing.Font("Arial Narrow", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(186)));
+            this.label2RegistrationCompany.Location = new System.Drawing.Point(256, 300);
+            this.label2RegistrationCompany.Name = "label2RegistrationCompany";
+            this.label2RegistrationCompany.Size = new System.Drawing.Size(144, 20);
+            this.label2RegistrationCompany.TabIndex = 9;
+            this.label2RegistrationCompany.Text = "Registruoti kompaniją";
+            this.label2RegistrationCompany.Click += new System.EventHandler(this.label2RegistrationCompany_Click);
+            this.label2RegistrationCompany.MouseEnter += new System.EventHandler(this.label2RegistrationCompany_MouseEnter);
+            this.label2RegistrationCompany.MouseLeave += new System.EventHandler(this.label2RegistrationCompany_MouseLeave);
+            // 
             // labelRegistration
             // 
             this.labelRegistration.AutoSize = true;
             this.labelRegistration.Cursor = System.Windows.Forms.Cursors.Hand;
             this.labelRegistration.Font = new System.Drawing.Font("Arial Narrow", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.labelRegistration.Location = new System.Drawing.Point(219, 300);
+            this.labelRegistration.Location = new System.Drawing.Point(142, 300);
             this.labelRegistration.Name = "labelRegistration";
             this.labelRegistration.Size = new System.Drawing.Size(84, 20);
             this.labelRegistration.TabIndex = 7;
             this.labelRegistration.Text = "Registruotis";
-            this.labelRegistration.Click += new System.EventHandler(this.labelRegistration_Click);
             this.labelRegistration.MouseEnter += new System.EventHandler(this.labelRegistration_MouseEnter);
             this.labelRegistration.MouseLeave += new System.EventHandler(this.labelRegistration_MouseLeave);
             // 
@@ -85,7 +100,6 @@
             this.buttonLogin.TabIndex = 6;
             this.buttonLogin.Text = "Prisijungti";
             this.buttonLogin.UseVisualStyleBackColor = false;
-            this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click);
             // 
             // textBoxPassword
             // 
@@ -190,5 +204,6 @@
         private System.Windows.Forms.TextBox textBoxUserName;
         private System.Windows.Forms.Label labelClose;
         private System.Windows.Forms.Label labelRegistration;
+        private System.Windows.Forms.Label label2RegistrationCompany;
     }
 }

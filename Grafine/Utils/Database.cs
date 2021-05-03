@@ -18,7 +18,7 @@ namespace Grafine.Utils
         static private string server = "localhost";
         static private string database = "dalysadmin";
         static private string uid = "root";
-        static private string password = "meme";
+        static private string password = "password";//meme
         static private string connstring = "SERVER=" + server + ";" + "DATABASE=" + database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
         private string CurrentActiveUser = "";
         private string CurrentActivePassword = "";

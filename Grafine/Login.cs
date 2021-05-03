@@ -1,7 +1,4 @@
 ﻿using System;
-using System.IO;
-using Grafine.Utils;
-using MySql.Data.MySqlClient;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -47,6 +44,7 @@ namespace Grafine
         {
             labelRegistration.ForeColor = Color.Black;
         }
+
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
@@ -101,12 +99,5 @@ namespace Grafine
             }
         }
 
-        private void labelRegistration_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Registration newForm = new Registration();
-            newForm.ShowDialog();
-            this.Close();
-        }
     }
 }

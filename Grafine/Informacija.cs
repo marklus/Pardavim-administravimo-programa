@@ -1,7 +1,4 @@
 ﻿using System;
-using System.IO;
-using Grafine.Utils;
-using MySql.Data.MySqlClient;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,6 +16,7 @@ namespace Grafine
         {
             InitializeComponent();
         }
+<<<<<<< HEAD
 
         private void buttonRegistr_Click(object sender, EventArgs e)
         {
@@ -104,5 +102,16 @@ namespace Grafine
             newForm.ShowDialog();
             this.Close();
         }
+
+        private void katalogasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Katalogas newForm = new Katalogas();
+            newForm.ShowDialog();
+            this.Close();
+        }
+=======
+        
+>>>>>>> parent of f41674f (Merge pull request #5 from tomacatx2/main)
     }
 }
