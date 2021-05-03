@@ -441,3 +441,4 @@ C:\Users\Tom\Documents\GitHub\Pardavim-administravimo-programa\Grafine\obj\Debug
 C:\Users\Tom\Documents\GitHub\Pardavim-administravimo-programa\Grafine\obj\Debug\Grafine.PrekiuSarasas.resources
 C:\Users\Tom\Documents\GitHub\Pardavim-administravimo-programa\Grafine\obj\Debug\Grafine.SandelysRegistracija.resources
 C:\Users\Tom\Documents\GitHub\Pardavim-administravimo-programa\Grafine\obj\Debug\Grafine.SandelysSarasas.resources
+C:\Users\Tom\Documents\GitHub\Pardavim-administravimo-programa\Grafine\obj\Debug\Grafine.SandelysModifikacija.resources

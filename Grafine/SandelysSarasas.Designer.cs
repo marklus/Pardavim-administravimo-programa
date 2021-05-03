@@ -30,6 +30,7 @@ namespace Grafine
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonRefresh = new System.Windows.Forms.Button();
             this.buttonReturn = new System.Windows.Forms.Button();
             this.dataGridViewWarehouses = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -41,7 +42,7 @@ namespace Grafine
             this.ColumnFreeSpace = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnList = new System.Windows.Forms.DataGridViewButtonColumn();
             this.ColumnDelete = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.buttonRefresh = new System.Windows.Forms.Button();
+            this.ColumnModify = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewWarehouses)).BeginInit();
             this.panel2.SuspendLayout();
@@ -57,8 +58,21 @@ namespace Grafine
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(751, 512);
+            this.panel1.Size = new System.Drawing.Size(762, 512);
             this.panel1.TabIndex = 5;
+            // 
+            // buttonRefresh
+            // 
+            this.buttonRefresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.buttonRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
+            this.buttonRefresh.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonRefresh.Location = new System.Drawing.Point(517, 451);
+            this.buttonRefresh.Name = "buttonRefresh";
+            this.buttonRefresh.Size = new System.Drawing.Size(108, 52);
+            this.buttonRefresh.TabIndex = 13;
+            this.buttonRefresh.Text = "Atstatyti";
+            this.buttonRefresh.UseVisualStyleBackColor = false;
+            this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
             // 
             // buttonReturn
             // 
@@ -85,11 +99,12 @@ namespace Grafine
             this.ColumnTakenSpace,
             this.ColumnFreeSpace,
             this.ColumnList,
-            this.ColumnDelete});
-            this.dataGridViewWarehouses.Location = new System.Drawing.Point(11, 153);
+            this.ColumnDelete,
+            this.ColumnModify});
+            this.dataGridViewWarehouses.Location = new System.Drawing.Point(12, 151);
             this.dataGridViewWarehouses.Name = "dataGridViewWarehouses";
             this.dataGridViewWarehouses.ReadOnly = true;
-            this.dataGridViewWarehouses.Size = new System.Drawing.Size(727, 292);
+            this.dataGridViewWarehouses.Size = new System.Drawing.Size(739, 292);
             this.dataGridViewWarehouses.TabIndex = 2;
             this.dataGridViewWarehouses.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewWarehouses_CellContentClick);
             // 
@@ -99,14 +114,14 @@ namespace Grafine
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(751, 145);
+            this.panel2.Size = new System.Drawing.Size(762, 145);
             this.panel2.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.DarkGray;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.label1.Location = new System.Drawing.Point(179, 0);
+            this.label1.Location = new System.Drawing.Point(202, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(372, 121);
             this.label1.TabIndex = 0;
@@ -156,24 +171,19 @@ namespace Grafine
             this.ColumnDelete.Name = "ColumnDelete";
             this.ColumnDelete.ReadOnly = true;
             // 
-            // buttonRefresh
+            // ColumnModify
             // 
-            this.buttonRefresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.buttonRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.buttonRefresh.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.buttonRefresh.Location = new System.Drawing.Point(517, 451);
-            this.buttonRefresh.Name = "buttonRefresh";
-            this.buttonRefresh.Size = new System.Drawing.Size(108, 52);
-            this.buttonRefresh.TabIndex = 13;
-            this.buttonRefresh.Text = "Atstatyti";
-            this.buttonRefresh.UseVisualStyleBackColor = false;
-            this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
+            this.ColumnModify.HeaderText = "Modifikuoti";
+            this.ColumnModify.Name = "ColumnModify";
+            this.ColumnModify.ReadOnly = true;
+            this.ColumnModify.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColumnModify.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // SandelysSarasas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(751, 512);
+            this.ClientSize = new System.Drawing.Size(762, 512);
             this.Controls.Add(this.panel1);
             this.Name = "SandelysSarasas";
             this.Text = "SandelysSarasas";
@@ -191,6 +201,7 @@ namespace Grafine
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridViewWarehouses;
         private System.Windows.Forms.Button buttonReturn;
+        private System.Windows.Forms.Button buttonRefresh;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnID;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCode;
@@ -198,6 +209,6 @@ namespace Grafine
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnFreeSpace;
         private System.Windows.Forms.DataGridViewButtonColumn ColumnList;
         private System.Windows.Forms.DataGridViewButtonColumn ColumnDelete;
-        private System.Windows.Forms.Button buttonRefresh;
+        private System.Windows.Forms.DataGridViewButtonColumn ColumnModify;
     }
 }

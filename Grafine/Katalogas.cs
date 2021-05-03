@@ -193,7 +193,7 @@ namespace Grafine
         {
             
             SandelysSarasas newForm = new SandelysSarasas();
-            newForm.ShowDialog();
+            newForm.Show();
             
         }
     }

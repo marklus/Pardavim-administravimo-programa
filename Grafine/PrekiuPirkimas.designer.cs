@@ -81,9 +81,24 @@ namespace Grafine
             // numericUpDownAmount
             // 
             this.numericUpDownAmount.Location = new System.Drawing.Point(80, 61);
+            this.numericUpDownAmount.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
+            this.numericUpDownAmount.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.numericUpDownAmount.Name = "numericUpDownAmount";
             this.numericUpDownAmount.Size = new System.Drawing.Size(66, 20);
             this.numericUpDownAmount.TabIndex = 20;
+            this.numericUpDownAmount.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // PrekiuPirkimas
             // 

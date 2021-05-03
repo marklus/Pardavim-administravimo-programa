@@ -37,7 +37,8 @@ namespace Grafine
                                                     (int)contentData["uzimtumas"],
                                                     (int)contentData["laisvas_plotas"],
                                                     "Žiūrėti",
-                                                    "Šalinti");
+                                                    "Šalinti",
+                                                    "Modifikuoti");
             }
             Database.Close();
         }
@@ -50,22 +51,32 @@ namespace Grafine
             int taken = (int)dataGridViewWarehouses.Rows[e.RowIndex].Cells[3].Value;
             int free = (int)dataGridViewWarehouses.Rows[e.RowIndex].Cells[4].Value;
 
-
-            if (dataGridViewWarehouses.Columns[e.ColumnIndex].Name == "ColumnDelete")
+            if(e.ColumnIndex != -1 && e.RowIndex != -1)
             {
-                if (MessageBox.Show("Ar jūs esate tikri, jog norite panaikinti šitą įrašą?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (dataGridViewWarehouses.Columns[e.ColumnIndex].Name == "ColumnDelete")
                 {
-                    Database.Delete($"DELETE FROM dalysadmin.sandeliai WHERE id={id}");
-                    InitializeComponent();
-                    GetContent();
+                    if (MessageBox.Show("Ar jūs esate tikri, jog norite panaikinti šitą įrašą?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        Database.Delete($"DELETE FROM dalysadmin.sandeliai WHERE id={id}");
+                        InitializeComponent();
+                        GetContent();
+                    }
+                }
+                else if (dataGridViewWarehouses.Columns[e.ColumnIndex].Name == "ColumnList")
+                {
+                    PrekiuSarasas newForm = new PrekiuSarasas(dataGridViewWarehouses.Rows[e.RowIndex].Cells[2].Value.ToString());
+                    newForm.Show();
+
+                }
+                else if (dataGridViewWarehouses.Columns[e.ColumnIndex].Name == "ColumnModify")
+                {
+                    
+                    SandelysModifikacija newForm = new SandelysModifikacija(name, free, code);
+                    newForm.Show();
+
                 }
             }
-            else if(dataGridViewWarehouses.Columns[e.ColumnIndex].Name == "ColumnList")
-            {
-                PrekiuSarasas newForm = new PrekiuSarasas(dataGridViewWarehouses.Rows[e.RowIndex].Cells[2].Value.ToString());
-                newForm.Show();
-
-            }
+           
         }
 
         private void buttonRefresh_Click(object sender, EventArgs e)
