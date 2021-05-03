@@ -435,3 +435,9 @@ C:\Users\Martynas\Documents\GitHub\Pardavim-administravimo-programa\Grafine\obj\
 C:\Users\Martynas\Documents\GitHub\Pardavim-administravimo-programa\Grafine\obj\Debug\Grafine.pdb
 C:\Users\Martynas\Documents\GitHub\Pardavim-administravimo-programa\Grafine\obj\Debug\Grafine.RegistrationStorehouse.resources
 C:\Users\Martynas\Documents\GitHub\Pardavim-administravimo-programa\Grafine\obj\Debug\Grafine.DeletingStorehouse.resources
+C:\Users\Tom\Documents\GitHub\Pardavim-administravimo-programa\Grafine\obj\Debug\Grafine.DeletingStorehouse.resources
+C:\Users\Tom\Documents\GitHub\Pardavim-administravimo-programa\Grafine\obj\Debug\Grafine.RegistrationStorehouse.resources
+C:\Users\Tom\Documents\GitHub\Pardavim-administravimo-programa\Grafine\obj\Debug\Grafine.PrekiuPirkimas.resources
+C:\Users\Tom\Documents\GitHub\Pardavim-administravimo-programa\Grafine\obj\Debug\Grafine.PrekiuSarasas.resources
+C:\Users\Tom\Documents\GitHub\Pardavim-administravimo-programa\Grafine\obj\Debug\Grafine.SandelysRegistracija.resources
+C:\Users\Tom\Documents\GitHub\Pardavim-administravimo-programa\Grafine\obj\Debug\Grafine.SandelysSarasas.resources

@@ -140,6 +140,18 @@
     <Compile Include="popup.Designer.cs">
       <DependentUpon>popup.cs</DependentUpon>
     </Compile>
+    <Compile Include="PrekiuPirkimas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrekiuPirkimas.designer.cs">
+      <DependentUpon>PrekiuPirkimas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrekiuSarasas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrekiuSarasas.Designer.cs">
+      <DependentUpon>PrekiuSarasas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Product.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,7 +177,20 @@
     <Compile Include="RegistrationStorehouse.Designer.cs">
       <DependentUpon>RegistrationStorehouse.cs</DependentUpon>
     </Compile>
+    <Compile Include="SandelysRegistracija.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SandelysRegistracija.Designer.cs">
+      <DependentUpon>SandelysRegistracija.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SandelysSarasas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SandelysSarasas.Designer.cs">
+      <DependentUpon>SandelysSarasas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utils\Database.cs" />
+    <Compile Include="Utils\PartClass.cs" />
     <EmbeddedResource Include="DeletingStorehouse.resx">
       <DependentUpon>DeletingStorehouse.cs</DependentUpon>
     </EmbeddedResource>
@@ -190,6 +215,12 @@
     <EmbeddedResource Include="popup.resx">
       <DependentUpon>popup.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PrekiuPirkimas.resx">
+      <DependentUpon>PrekiuPirkimas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrekiuSarasas.resx">
+      <DependentUpon>PrekiuSarasas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Product.resx">
       <DependentUpon>Product.cs</DependentUpon>
     </EmbeddedResource>
@@ -203,6 +234,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RegistrationStorehouse.resx">
       <DependentUpon>RegistrationStorehouse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SandelysRegistracija.resx">
+      <DependentUpon>SandelysRegistracija.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SandelysSarasas.resx">
+      <DependentUpon>SandelysSarasas.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

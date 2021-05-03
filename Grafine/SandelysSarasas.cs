@@ -71,7 +71,7 @@ namespace Grafine
         private void buttonRefresh_Click(object sender, EventArgs e)
         {
             this.Hide();
-            SandelysRegistracija newForm = new SandelysRegistracija();
+            SandelysSarasas newForm = new SandelysSarasas();
             newForm.ShowDialog();
             this.Close();
         }

@@ -121,9 +121,6 @@ namespace Grafine
 
         private void buttonRemove_Click(object sender, EventArgs e)
         {
-<<<<<<< Updated upstream
-            Katalogo_salinimas newForm = new Katalogo_salinimas();
-=======
             SandelysSarasas newForm = new SandelysSarasas();
             newForm.Show();
         }
@@ -165,7 +162,6 @@ namespace Grafine
 
             this.Hide();
             Katalogas newForm = new Katalogas(1, target, item);
->>>>>>> Stashed changes
             newForm.ShowDialog();
             this.Close();
 
@@ -191,6 +187,14 @@ namespace Grafine
 
             }
             Database.Close();
+        }
+
+        private void deleteStorehouse_Click(object sender, EventArgs e)
+        {
+            
+            SandelysSarasas newForm = new SandelysSarasas();
+            newForm.ShowDialog();
+            
         }
     }
 }

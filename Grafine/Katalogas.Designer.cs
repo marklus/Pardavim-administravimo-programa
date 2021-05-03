@@ -36,12 +36,6 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-<<<<<<< Updated upstream
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
-            this.textBoxList = new System.Windows.Forms.TextBox();
-            this.buttonRemove = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-=======
             this.createStorehouse = new System.Windows.Forms.Button();
             this.deleteStorehouse = new System.Windows.Forms.Button();
             this.dataGridViewContent = new System.Windows.Forms.DataGridView();
@@ -58,7 +52,6 @@
             this.buttonFilter = new System.Windows.Forms.Button();
             this.textBoxFilter = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewContent)).BeginInit();
->>>>>>> Stashed changes
             this.SuspendLayout();
             // 
             // label1
@@ -154,37 +147,6 @@
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-<<<<<<< Updated upstream
-            // checkedListBox1
-            // 
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Location = new System.Drawing.Point(75, 49);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(134, 19);
-            this.checkedListBox1.TabIndex = 12;
-            // 
-            // textBoxList
-            // 
-            this.textBoxList.Location = new System.Drawing.Point(12, 81);
-            this.textBoxList.Multiline = true;
-            this.textBoxList.Name = "textBoxList";
-            this.textBoxList.ReadOnly = true;
-            this.textBoxList.Size = new System.Drawing.Size(776, 299);
-            this.textBoxList.TabIndex = 13;
-            // 
-            // buttonRemove
-            // 
-            this.buttonRemove.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.buttonRemove.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.buttonRemove.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.buttonRemove.Location = new System.Drawing.Point(355, 386);
-            this.buttonRemove.Name = "buttonRemove";
-            this.buttonRemove.Size = new System.Drawing.Size(178, 52);
-            this.buttonRemove.TabIndex = 14;
-            this.buttonRemove.Text = "Šalinti iš katalogo";
-            this.buttonRemove.UseVisualStyleBackColor = false;
-            this.buttonRemove.Click += new System.EventHandler(this.buttonRemove_Click);
-=======
             // createStorehouse
             // 
             this.createStorehouse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -210,7 +172,6 @@
             this.deleteStorehouse.Text = "Žiūrėti sandėlius";
             this.deleteStorehouse.UseVisualStyleBackColor = false;
             this.deleteStorehouse.Click += new System.EventHandler(this.deleteStorehouse_Click);
->>>>>>> Stashed changes
             // 
             // dataGridViewContent
             // 
@@ -324,12 +285,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-<<<<<<< Updated upstream
-            this.ClientSize = new System.Drawing.Size(812, 450);
-            this.Controls.Add(this.buttonRemove);
-            this.Controls.Add(this.textBoxList);
-            this.Controls.Add(this.checkedListBox1);
-=======
             this.ClientSize = new System.Drawing.Size(968, 450);
             this.Controls.Add(this.textBoxFilter);
             this.Controls.Add(this.buttonFilter);
@@ -337,7 +292,6 @@
             this.Controls.Add(this.dataGridViewContent);
             this.Controls.Add(this.deleteStorehouse);
             this.Controls.Add(this.createStorehouse);
->>>>>>> Stashed changes
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
@@ -364,11 +318,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
-<<<<<<< Updated upstream
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
-        private System.Windows.Forms.TextBox textBoxList;
-        private System.Windows.Forms.Button buttonRemove;
-=======
         private System.Windows.Forms.Button createStorehouse;
         private System.Windows.Forms.Button deleteStorehouse;
         private System.Windows.Forms.DataGridView dataGridViewContent;
@@ -384,6 +333,5 @@
         private System.Windows.Forms.ComboBox comboBoxFilter;
         private System.Windows.Forms.Button buttonFilter;
         private System.Windows.Forms.TextBox textBoxFilter;
->>>>>>> Stashed changes
     }
 }
