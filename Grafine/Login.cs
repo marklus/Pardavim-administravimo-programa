@@ -46,33 +46,58 @@ namespace Grafine
         }
 
 
-<<<<<<< HEAD
-        private void labelRegistration_Click(object sender, EventArgs e)
+        private void buttonLogin_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Registration newForm = new Registration();
-            newForm.ShowDialog();
-            this.Close();
+            string userName = textBoxUserName.Text;
+            string password = textBoxPassword.Text;
+            int counter = 0;
+            List<Tuple<string, string, string>> output = new List<Tuple<string, string, string>>();
+            MySqlDataReader outputStream = Database.Select($"SELECT * FROM dalysadmin.vartotojai WHERE vardas ='{userName}' AND slaptazodis ='{password}';");
+            while (outputStream.Read())
+            {
+                counter++;
+                //Console.WriteLine(outputStream["id"] + " " + outputStream["vardas"] + " " + outputStream["slaptazodis"]);
+                output.Add(new Tuple<string, string, string>(outputStream["vardas"].ToString(), outputStream["slaptazodis"].ToString(), outputStream["id"].ToString()));
+
+
+            }
+            Database.Close();
+            if (counter == 1)
+            {
+                if (output[0].Item1 == userName && output[0].Item2 == password)
+                {
+                    //StreamWriter activate = new StreamWriter("logins.txt");
+                    Database.Activate(userName, output[0].Item3);
+                    //activate.WriteLine(userName);
+                    //activate.WriteLine(output[0].Item3);
+                    //activate.Close();
+
+                    //Console.WriteLine("pavyko");
+                    this.Hide();
+                    Main newForm = new Main();
+                    newForm.ShowDialog();
+                    this.Close();
+                }
+                else
+                {
+                    popup newForm = new popup("Neteisingas slaptažodis arba prisijungimo vardas.");
+                    newForm.ShowDialog();
+                    //Console.WriteLine("nepavyko");
+                }
+            }
+            else if (counter == 0)
+            {
+                popup newForm = new popup("Prašau įveskite tinkamą vartotojo vardą ir slaptažodį.");
+                newForm.ShowDialog();
+                Console.WriteLine($"counter = {counter}");
+            }
+            else
+            {
+                popup newForm = new popup("Duplikuotos paskyros. Prašau susisiekite su administratoriumi.");
+                newForm.ShowDialog();
+                Console.WriteLine($"counter = {counter}");
+            }
         }
 
-        private void label2RegistrationCompany_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            RegistrationCompany newForm = new RegistrationCompany();
-            newForm.ShowDialog();
-            this.Close();
-        }
-
-        private void label2RegistrationCompany_MouseEnter(object sender, EventArgs e)
-        {
-            label2RegistrationCompany.ForeColor = Color.White;
-        }
-
-        private void label2RegistrationCompany_MouseLeave(object sender, EventArgs e)
-        {
-            label2RegistrationCompany.ForeColor = Color.Black;
-        }
-=======
->>>>>>> parent of f41674f (Merge pull request #5 from tomacatx2/main)
     }
 }
