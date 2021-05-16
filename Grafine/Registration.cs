@@ -18,6 +18,7 @@ namespace Grafine
         public Registration()
         {
             InitializeComponent();
+            textBoxCompID.Text = Database.GenerateCode();
         }
 
 
@@ -71,8 +72,13 @@ namespace Grafine
                 Database.Close();
                 if (counter == 0)
                 {
-                    popup newForm = new popup("Jūsų nurodyta įmonė nerasta.");
-                    newForm.ShowDialog();
+                    
+                    if (MessageBox.Show("Jūsų nurodyta įmonė nerasta. Ar norite pridėti naują įmonę su įvestais duomenimis?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        Database.Insert($"INSERT INTO dalysadmin.imones(pavadinimas, san_ID, vidKo) VALUES('{companyName}','UNUSED','{companyCode}');");
+                        popup newForm = new popup("Įmonė įregistruota. Galite testi vartotojo paskyros registraciją.");
+                        newForm.ShowDialog();
+                    }
                 }
                 else if (counter == 1)
                 {
@@ -88,7 +94,7 @@ namespace Grafine
                     Database.Close();
                     if (counter != 0)
                     {
-                        popup newForm = new popup("Nurodytas vartotojas egzistuoja.");
+                        popup newForm = new popup("Nurodytas vartotojas jau egzistuoja.");
                         newForm.ShowDialog();
                         //Console.WriteLine("toks vartotojas jau egzistuoja");
                     }
@@ -122,6 +128,20 @@ namespace Grafine
             Login newForm = new Login();
             newForm.ShowDialog();
             this.Close();
+        }
+
+        private void buttonGenerate_Click(object sender, EventArgs e)
+        {
+            string code = Database.GenerateCode();
+            if (!Database.CodeExists("imones", code))
+            {
+                textBoxCompID.Text = code;
+            }
+            else
+            {
+                buttonGenerate_Click(sender, e);
+            }
+            
         }
     }
 }

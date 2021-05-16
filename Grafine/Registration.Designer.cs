@@ -41,6 +41,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.labelClose = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.buttonGenerate = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -48,6 +49,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel1.Controls.Add(this.buttonGenerate);
             this.panel1.Controls.Add(this.labelSingIn);
             this.panel1.Controls.Add(this.buttonRegistr);
             this.panel1.Controls.Add(this.textBoxTel);
@@ -83,7 +85,7 @@
             this.buttonRegistr.BackColor = System.Drawing.Color.DarkGray;
             this.buttonRegistr.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.buttonRegistr.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.buttonRegistr.Location = new System.Drawing.Point(154, 408);
+            this.buttonRegistr.Location = new System.Drawing.Point(12, 408);
             this.buttonRegistr.Name = "buttonRegistr";
             this.buttonRegistr.Size = new System.Drawing.Size(136, 34);
             this.buttonRegistr.TabIndex = 12;
@@ -195,6 +197,19 @@
             this.label1.Text = "Registracija";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // buttonGenerate
+            // 
+            this.buttonGenerate.BackColor = System.Drawing.Color.DarkGray;
+            this.buttonGenerate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.buttonGenerate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
+            this.buttonGenerate.Location = new System.Drawing.Point(154, 408);
+            this.buttonGenerate.Name = "buttonGenerate";
+            this.buttonGenerate.Size = new System.Drawing.Size(268, 34);
+            this.buttonGenerate.TabIndex = 14;
+            this.buttonGenerate.Text = "Generuoti naują vidinį kodą";
+            this.buttonGenerate.UseVisualStyleBackColor = false;
+            this.buttonGenerate.Click += new System.EventHandler(this.buttonGenerate_Click);
+            // 
             // Registration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -227,5 +242,6 @@
         private System.Windows.Forms.TextBox textBoxTel;
         private System.Windows.Forms.Button buttonRegistr;
         private System.Windows.Forms.Label labelSingIn;
+        private System.Windows.Forms.Button buttonGenerate;
     }
 }

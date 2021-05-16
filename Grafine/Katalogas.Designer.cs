@@ -36,7 +36,11 @@
             this.createStorehouse = new System.Windows.Forms.Button();
             this.deleteStorehouse = new System.Windows.Forms.Button();
             this.dataGridViewContent = new System.Windows.Forms.DataGridView();
+            this.comboBoxFilter = new System.Windows.Forms.ComboBox();
+            this.buttonFilter = new System.Windows.Forms.Button();
+            this.textBoxFilter = new System.Windows.Forms.TextBox();
             this.ColumnID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnWarehouseID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnMark = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,10 +48,8 @@
             this.ColumnPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnSeller = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnBuy = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.comboBoxFilter = new System.Windows.Forms.ComboBox();
-            this.buttonFilter = new System.Windows.Forms.Button();
-            this.textBoxFilter = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewContent)).BeginInit();
             this.SuspendLayout();
             // 
@@ -93,7 +95,7 @@
             this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.button4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button4.Location = new System.Drawing.Point(746, 49);
+            this.button4.Location = new System.Drawing.Point(851, 49);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(108, 30);
             this.button4.TabIndex = 10;
@@ -106,7 +108,7 @@
             this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.button5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button5.Location = new System.Drawing.Point(746, 386);
+            this.button5.Location = new System.Drawing.Point(851, 386);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(108, 52);
             this.button5.TabIndex = 11;
@@ -147,6 +149,7 @@
             this.dataGridViewContent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewContent.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnID,
+            this.ColumnWarehouseID,
             this.ColumnMark,
             this.ColumnType,
             this.ColumnYear,
@@ -154,14 +157,44 @@
             this.ColumnPrice,
             this.ColumnAmount,
             this.ColumnCode,
+            this.ColumnSeller,
             this.ColumnBuy});
             this.dataGridViewContent.Location = new System.Drawing.Point(12, 81);
             this.dataGridViewContent.Name = "dataGridViewContent";
             this.dataGridViewContent.ReadOnly = true;
-            this.dataGridViewContent.Size = new System.Drawing.Size(850, 292);
+            this.dataGridViewContent.Size = new System.Drawing.Size(947, 292);
             this.dataGridViewContent.TabIndex = 17;
             this.dataGridViewContent.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewContent_CellClick);
             this.dataGridViewContent.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewContent_CellContentClick);
+            // 
+            // comboBoxFilter
+            // 
+            this.comboBoxFilter.FormattingEnabled = true;
+            this.comboBoxFilter.Location = new System.Drawing.Point(75, 19);
+            this.comboBoxFilter.Name = "comboBoxFilter";
+            this.comboBoxFilter.Size = new System.Drawing.Size(107, 21);
+            this.comboBoxFilter.TabIndex = 18;
+            // 
+            // buttonFilter
+            // 
+            this.buttonFilter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.buttonFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
+            this.buttonFilter.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonFilter.Location = new System.Drawing.Point(12, 49);
+            this.buttonFilter.Name = "buttonFilter";
+            this.buttonFilter.Size = new System.Drawing.Size(108, 30);
+            this.buttonFilter.TabIndex = 19;
+            this.buttonFilter.Text = "Filtruoti";
+            this.buttonFilter.UseVisualStyleBackColor = false;
+            this.buttonFilter.Click += new System.EventHandler(this.buttonFilter_Click);
+            // 
+            // textBoxFilter
+            // 
+            this.textBoxFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxFilter.Location = new System.Drawing.Point(188, 14);
+            this.textBoxFilter.Name = "textBoxFilter";
+            this.textBoxFilter.Size = new System.Drawing.Size(252, 29);
+            this.textBoxFilter.TabIndex = 20;
             // 
             // ColumnID
             // 
@@ -169,6 +202,13 @@
             this.ColumnID.Name = "ColumnID";
             this.ColumnID.ReadOnly = true;
             this.ColumnID.Visible = false;
+            // 
+            // ColumnWarehouseID
+            // 
+            this.ColumnWarehouseID.HeaderText = "Sandėlio ID";
+            this.ColumnWarehouseID.Name = "ColumnWarehouseID";
+            this.ColumnWarehouseID.ReadOnly = true;
+            this.ColumnWarehouseID.Visible = false;
             // 
             // ColumnMark
             // 
@@ -212,47 +252,24 @@
             this.ColumnCode.Name = "ColumnCode";
             this.ColumnCode.ReadOnly = true;
             // 
+            // ColumnSeller
+            // 
+            this.ColumnSeller.HeaderText = "Pardavėjas";
+            this.ColumnSeller.Name = "ColumnSeller";
+            this.ColumnSeller.ReadOnly = true;
+            // 
             // ColumnBuy
             // 
             this.ColumnBuy.HeaderText = "";
             this.ColumnBuy.Name = "ColumnBuy";
             this.ColumnBuy.ReadOnly = true;
             // 
-            // comboBoxFilter
-            // 
-            this.comboBoxFilter.FormattingEnabled = true;
-            this.comboBoxFilter.Location = new System.Drawing.Point(75, 19);
-            this.comboBoxFilter.Name = "comboBoxFilter";
-            this.comboBoxFilter.Size = new System.Drawing.Size(107, 21);
-            this.comboBoxFilter.TabIndex = 18;
-            // 
-            // buttonFilter
-            // 
-            this.buttonFilter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.buttonFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.buttonFilter.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.buttonFilter.Location = new System.Drawing.Point(12, 49);
-            this.buttonFilter.Name = "buttonFilter";
-            this.buttonFilter.Size = new System.Drawing.Size(108, 30);
-            this.buttonFilter.TabIndex = 19;
-            this.buttonFilter.Text = "Filtruoti";
-            this.buttonFilter.UseVisualStyleBackColor = false;
-            this.buttonFilter.Click += new System.EventHandler(this.buttonFilter_Click);
-            // 
-            // textBoxFilter
-            // 
-            this.textBoxFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxFilter.Location = new System.Drawing.Point(188, 14);
-            this.textBoxFilter.Name = "textBoxFilter";
-            this.textBoxFilter.Size = new System.Drawing.Size(252, 29);
-            this.textBoxFilter.TabIndex = 20;
-            // 
             // Katalogas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(862, 450);
+            this.ClientSize = new System.Drawing.Size(968, 450);
             this.Controls.Add(this.textBoxFilter);
             this.Controls.Add(this.buttonFilter);
             this.Controls.Add(this.comboBoxFilter);
@@ -282,7 +299,11 @@
         private System.Windows.Forms.Button createStorehouse;
         private System.Windows.Forms.Button deleteStorehouse;
         private System.Windows.Forms.DataGridView dataGridViewContent;
+        private System.Windows.Forms.ComboBox comboBoxFilter;
+        private System.Windows.Forms.Button buttonFilter;
+        private System.Windows.Forms.TextBox textBoxFilter;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnWarehouseID;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnMark;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnType;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnYear;
@@ -290,9 +311,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnAmount;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnSeller;
         private System.Windows.Forms.DataGridViewButtonColumn ColumnBuy;
-        private System.Windows.Forms.ComboBox comboBoxFilter;
-        private System.Windows.Forms.Button buttonFilter;
-        private System.Windows.Forms.TextBox textBoxFilter;
     }
 }

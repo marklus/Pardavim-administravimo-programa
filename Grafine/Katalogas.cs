@@ -59,11 +59,14 @@ namespace Grafine
         }
         private void GetContent()
         {
-            MySqlDataReader outputStreamParts = Database.Select($"SELECT * FROM dalysadmin.dalys;");
-
-            while (outputStreamParts.Read())
+            MySqlDataReader outputStreamWarehouses = Database.Select($"SELECT * FROM dalysadmin.sandeliai WHERE vartotojoID != '{Database.GetUserID()}';");
+            List<string> warehouses = new List<string>();
+            while (outputStreamWarehouses.Read())
             {
-                dataGridViewContent.Rows.Add(
+                
+                warehouses.Add(outputStreamWarehouses["vidKo"].ToString());
+
+                /*dataGridViewContent.Rows.Add(
                     (int)outputStreamParts["id"],
                     outputStreamParts["marke"].ToString(),
                     outputStreamParts["tipas"].ToString(),
@@ -73,10 +76,41 @@ namespace Grafine
                     "",//kiekis todo
                     outputStreamParts["vidKo"],
                     "Pirkti"
-                    );
-
+                    );*/
+                
             }
             Database.Close();
+            
+            foreach(string code in warehouses)
+            {
+                MySqlDataReader outputStreamParts = Database.Select($"SELECT * FROM dalysadmin.sandeliai WHERE vidKo = '{code}';");
+                while (outputStreamParts.Read())
+                {
+                    string allParts = outputStreamParts["prekes"].ToString();
+                    string[] partCodeAmounts = allParts.Split(new char[1] { ';' }, StringSplitOptions.RemoveEmptyEntries);
+                    foreach (string warehouseCode in partCodeAmounts)
+                    {
+                        //Console.WriteLine(s);
+                        PartClass partData;
+                        int partID = Int32.Parse(warehouseCode.Split(new char[1] { ',' }, StringSplitOptions.RemoveEmptyEntries)[0]);
+                        int amount = Int32.Parse(warehouseCode.Split(new char[1] { ',' }, StringSplitOptions.RemoveEmptyEntries)[1]);
+                        partData = Database.ConvertFromWarehouseFormat(partID, amount, code);
+                        //Console.WriteLine($"{partID} {amount}");
+                        dataGridViewContent.Rows.Add(partData.ID,
+                            code,
+                            partData.Mark,
+                            partData.Type,
+                            partData.Year,
+                            partData.Maker,
+                            partData.Price,
+                            partData.Amount,
+                            partData.Code,
+                            Database.GetUsername(Int32.Parse(outputStreamParts["vartotojoID"].ToString())),
+                            "Pirkti");
+                    }
+                }
+                Database.Close();
+            }
         }
         private void FormatList()
         {
@@ -141,10 +175,11 @@ namespace Grafine
             if(e.RowIndex != -1 && e.ColumnIndex != -1)
             {
                 int id = (int)dataGridViewContent.Rows[e.RowIndex].Cells[0].Value;
+                string warehouseID = dataGridViewContent.Rows[e.RowIndex].Cells[1].Value.ToString();
 
                 if (dataGridViewContent.Columns[e.ColumnIndex].Name == "ColumnBuy")
                 {
-                    PrekiuPirkimas newForm = new PrekiuPirkimas(id);
+                    PrekiuPirkimas newForm = new PrekiuPirkimas(id, warehouseID);
                     newForm.Show();
                 }
             }

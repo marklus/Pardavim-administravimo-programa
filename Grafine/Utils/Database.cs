@@ -18,8 +18,9 @@ namespace Grafine.Utils
         static private string server = "localhost";
         static private string database = "dalysadmin";
         static private string uid = "root";
-        static private string password = "meme";
-        static private string connstring = "SERVER=" + server + ";" + "DATABASE=" + database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
+        static private string password = "password";
+        private static string port = "3306";
+        static private string connstring = $"SERVER={server};PORT={port};DATABASE={database};UID={uid};PASSWORD={password};";
         private string CurrentActiveUser = "";
         private string CurrentActivePassword = "";
         public static MySqlConnection connection;
@@ -175,6 +176,35 @@ namespace Grafine.Utils
 
             outputStreamParts.Close();
             return partData;
+        }
+        public static bool CodeExists(string targetTable, string code)
+        {
+            bool exists = false;
+            int counter = 0;
+            MySqlDataReader outputStream = Database.Select($"SELECT * FROM dalysadmin.{targetTable} WHERE vidKo ='{code}'");
+            while(outputStream.Read())
+            {
+                counter++;
+            }
+            if(counter != 0)
+            {
+                exists = true;
+            }
+            else 
+            {
+                exists = false;
+            }
+            return exists;
+        }
+        public static string GetUsername(int userID)
+        {
+            string username = "";
+            MySqlDataReader outputStream = Database.Select($"SELECT * FROM dalysadmin.vartotojai WHERE id ='{userID}';");
+            while(outputStream.Read())
+            {
+                username = outputStream["vardas"].ToString();
+            }
+            return username;
         }
     }
 }
