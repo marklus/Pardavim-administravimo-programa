@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Grafine
 {
@@ -230,6 +231,55 @@ namespace Grafine
             SandelysSarasas newForm = new SandelysSarasas();
             newForm.Show();
             
+        }
+
+        private void pradinisToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Main newForm = new Main();
+            newForm.ShowDialog();
+            this.Close();
+
+        }
+
+        private void katalogasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Main newForm = new Main();
+            newForm.ShowDialog();
+            this.Close();
+
+        }
+
+        private void pardavimaiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pirkimaiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void informacijaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Informacija newForm = new Informacija();
+            newForm.ShowDialog();
+            this.Close();
+
+        }
+
+        private void atsijungtiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            StreamWriter clear = new StreamWriter("logins.txt");
+            clear.Close();
+
+            this.Hide();
+            Login newForm = new Login();
+            newForm.ShowDialog();
+            this.Close();
+
         }
     }
 }

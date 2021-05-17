@@ -9,13 +9,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Grafine
 {
-    
+
     public partial class Katalogo_pridejimas : Form
     {
-        
+
         public Katalogo_pridejimas()
         {
             InitializeComponent();
@@ -23,9 +24,9 @@ namespace Grafine
 
         private void Add_Button_Click(object sender, EventArgs e)
         {
-            
 
-            if(textBoxCode.Text == "")
+
+            if (textBoxCode.Text == "")
             {
                 popup newForm = new popup("Prašau sugeneruokite kodą.");
                 newForm.ShowDialog();
@@ -62,10 +63,9 @@ namespace Grafine
                     newForm.ShowDialog();
                 }
             }
-           
+
 
         }
-        
         private void textBoxAmount_TextChanged(object sender, EventArgs e)
         {
 
@@ -130,5 +130,45 @@ namespace Grafine
         {
             textBoxCode.Text = Database.GenerateCode();
         }
+
+        private void pradinisToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Main newForm = new Main();
+            newForm.ShowDialog();
+            this.Close();
+        }
+
+        private void katalogasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Katalogas newForm = new Katalogas();
+            newForm.ShowDialog();
+            this.Close();
+
+        }
+
+        private void atsijungtiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            StreamWriter clear = new StreamWriter("logins.txt");
+            clear.Close();
+
+            this.Hide();
+            Login newForm = new Login();
+            newForm.ShowDialog();
+            this.Close();
+
+
+        }
+
+        private void informacijaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Informacija newForm = new Informacija();
+            newForm.ShowDialog();
+            this.Close();
+
+        }
+
     }
 }
