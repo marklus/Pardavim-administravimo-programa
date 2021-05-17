@@ -98,6 +98,7 @@ namespace Grafine
                 newForm.ShowDialog();
                 Console.WriteLine($"counter = {counter}");
             }
+            Database.Close();
         }
 
         private void labelRegistration_Click(object sender, EventArgs e)
