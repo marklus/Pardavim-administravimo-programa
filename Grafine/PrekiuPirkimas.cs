@@ -17,11 +17,13 @@ namespace Grafine
     {
         private int ID;
         private string SellerWarehouseCode;
-        public PrekiuPirkimas(int partId, string warehouseCode)
+        private string SellerCode;
+        public PrekiuPirkimas(int partId, string warehouseCode, string sellerName )
         {
             InitializeComponent();
             GetWarehouses();
             this.ID = partId;
+            this.SellerCode = Database.GetUserIDByName(sellerName);
             this.SellerWarehouseCode = warehouseCode;                   //prekes ID
         }
 
@@ -34,19 +36,47 @@ namespace Grafine
             int takenSpace = 0;
             int maxSpace = 0;
             int freeSpace = 0;
+            bool isDetected = false;
+            string newParts = "";
+            string format = "yyyy-MM-dd HH:mm:ss";
             //string part = Database.ConvertToWarehouseFormat(ID, Mark, Type, Year, Maker, Price, amount, Code);
             MySqlDataReader outputStreamWarehouses = Database.Select($"SELECT * FROM dalysadmin.sandeliai WHERE (vartotojoID='{Database.GetUserID()}' AND pavadinimas='{warehouse}');");
-            while(outputStreamWarehouses.Read())
+            while (outputStreamWarehouses.Read())
             {
-                parts += outputStreamWarehouses["prekes"];
+                //parts += outputStreamWarehouses["prekes"];
+                //isDetected = false;
+                
                 takenSpace = (int)outputStreamWarehouses["uzimtumas"];
                 maxSpace = (int)outputStreamWarehouses["uzimtumas"] + (int)outputStreamWarehouses["laisvas_plotas"];
                 freeSpace = (int)outputStreamWarehouses["laisvas_plotas"];
+                string allParts = outputStreamWarehouses["prekes"].ToString();
+                string[] partCodeAmounts = allParts.Split(new char[1] { ';' }, StringSplitOptions.RemoveEmptyEntries);
+                foreach (string warehouseCode in partCodeAmounts)
+                {
+                    int partID = Int32.Parse(warehouseCode.Split(new char[1] { ',' }, StringSplitOptions.RemoveEmptyEntries)[0]);
+                    int sourceAmount = Int32.Parse(warehouseCode.Split(new char[1] { ',' }, StringSplitOptions.RemoveEmptyEntries)[1]);
+                    if (partID != ID)
+                    {
+                        newParts += warehouseCode + ";";
+                    }
+                    else if (isDetected == false)
+                    {
+                        newParts += $"{partID},{sourceAmount + amount};";
+                        isDetected = true;
+                        //break;
+                    }
+                }
 
             }
             takenSpace += amount;
             int takenSpaceFree = freeSpace - amount;
-            parts += $"{ID},{amount};";
+
+
+            if (isDetected == false)
+            {
+                newParts += $"{ID},{amount};";
+            }
+            
 
             Database.Close();
             if(amount < freeSpace)
@@ -54,10 +84,11 @@ namespace Grafine
 
                 if (UpdateSourceDatabase())
                 { 
-                    Database.Update($"UPDATE dalysadmin.sandeliai SET prekes = '{parts}', uzimtumas ='{takenSpace}', laisvas_plotas ='{takenSpaceFree}' WHERE (vartotojoID = '{Database.GetUserID()}' AND pavadinimas='{warehouse}');");
+                    Database.Update($"UPDATE dalysadmin.sandeliai SET prekes = '{newParts}', uzimtumas ='{takenSpace}', laisvas_plotas ='{takenSpaceFree}' WHERE (vartotojoID = '{Database.GetUserID()}' AND pavadinimas='{warehouse}');");
                     MessageBox.Show("Pirkimas pavyko!");
                     comboBoxWarehouse_SelectedIndexChanged(sender, e);
                     Database.Close();
+                    Database.Insert($"INSERT INTO dalysadmin.uzsakymai(data, uzsakovo_ID, pardavejo_ID, prekes_ID, kiekis) VALUES('{DateTime.Now.ToString(format)}','{Database.GetUserID()}','{SellerCode}','{ID}','{amount}');");
                 }
                 
             }
@@ -70,7 +101,7 @@ namespace Grafine
         }
         private void GetWarehouses()
         {
-            string userID = Database.GetUserID();
+            int userID = Database.GetUserID();
             MySqlDataReader outputStreamWarehouses = Database.Select($"SELECT * FROM dalysadmin.sandeliai WHERE vartotojoID='{userID}';");
             while (outputStreamWarehouses.Read())
             {
@@ -100,7 +131,6 @@ namespace Grafine
                 string[] partCodeAmounts = allParts.Split(new char[1] { ';' }, StringSplitOptions.RemoveEmptyEntries);
                 foreach(string warehouseCode in partCodeAmounts)
                 {
-                    PartClass partData;
                     int partID = Int32.Parse(warehouseCode.Split(new char[1] { ',' }, StringSplitOptions.RemoveEmptyEntries)[0]);
                     int sourceAmount = Int32.Parse(warehouseCode.Split(new char[1] { ',' }, StringSplitOptions.RemoveEmptyEntries)[1]);
                     Console.WriteLine($"{partID} {ID}");
@@ -112,7 +142,7 @@ namespace Grafine
                     else if(partID == ID && (sourceAmount - amount < 0))
                     {
                         Console.WriteLine("g");
-                        MessageBox.Show("Pardavėjo sandelyje nėra jūsų nurodytam kiekio prekių!");
+                        MessageBox.Show("Pardavėjo sandelyje nėra jūsų nurodyto kiekio prekių!");
                         return false;
                     }
                     else 

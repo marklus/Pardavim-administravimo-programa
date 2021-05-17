@@ -18,7 +18,11 @@ namespace Grafine
         public Login()
         {
             InitializeComponent();
-
+            string password = "password";
+            string enc =Database.Encrypt(password);
+            Console.WriteLine(enc);
+            string denc = Database.Decrypt(enc);
+            Console.WriteLine(denc);
             this.textBoxPassword.AutoSize = false;
             this.textBoxPassword.Size = new Size(this.textBoxPassword.Size.Width, 40);
         }
@@ -54,7 +58,7 @@ namespace Grafine
             string password = textBoxPassword.Text;
             int counter = 0;
             List<Tuple<string, string, string>> output = new List<Tuple<string, string, string>>();
-            MySqlDataReader outputStream = Database.Select($"SELECT * FROM dalysadmin.vartotojai WHERE vardas ='{userName}' AND slaptazodis ='{password}';");
+            MySqlDataReader outputStream = Database.Select($"SELECT * FROM dalysadmin.vartotojai WHERE vardas ='{userName}' AND slaptazodis ='{Database.Encrypt(password)}';");
             while (outputStream.Read())
             {
                 counter++;
@@ -66,7 +70,7 @@ namespace Grafine
             Database.Close();
             if (counter == 1)
             {
-                if (output[0].Item1 == userName && output[0].Item2 == password)
+                if (output[0].Item1 == userName && output[0].Item2 == Database.Encrypt(password))
                 {
                     //StreamWriter activate = new StreamWriter("logins.txt");
                     Database.Activate(userName, output[0].Item3);

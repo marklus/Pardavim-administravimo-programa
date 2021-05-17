@@ -91,6 +91,7 @@ namespace Grafine
                     string[] partCodeAmounts = allParts.Split(new char[1] { ';' }, StringSplitOptions.RemoveEmptyEntries);
                     foreach (string warehouseCode in partCodeAmounts)
                     {
+                        Console.WriteLine(warehouseCode);
                         //Console.WriteLine(s);
                         PartClass partData;
                         int partID = Int32.Parse(warehouseCode.Split(new char[1] { ',' }, StringSplitOptions.RemoveEmptyEntries)[0]);
@@ -177,10 +178,11 @@ namespace Grafine
             {
                 int id = (int)dataGridViewContent.Rows[e.RowIndex].Cells[0].Value;
                 string warehouseID = dataGridViewContent.Rows[e.RowIndex].Cells[1].Value.ToString();
+                string sellerUsername = dataGridViewContent.Rows[e.RowIndex].Cells[9].Value.ToString();
 
                 if (dataGridViewContent.Columns[e.ColumnIndex].Name == "ColumnBuy")
                 {
-                    PrekiuPirkimas newForm = new PrekiuPirkimas(id, warehouseID);
+                    PrekiuPirkimas newForm = new PrekiuPirkimas(id, warehouseID, sellerUsername);
                     newForm.Show();
                 }
             }

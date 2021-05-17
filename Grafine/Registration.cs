@@ -54,8 +54,8 @@ namespace Grafine
             string companyCode = textBoxCompID.Text;
             string email = textBoxEmail.Text;
             string username = textBoxUsrName.Text;
-            string password = textBoxPsw.Text;
-            string confirm = textBoxCnfPsw.Text;
+            string password = Database.Encrypt(textBoxPsw.Text);
+            string confirm = Database.Encrypt(textBoxCnfPsw.Text);
             string phone = textBoxTel.Text;
             int counter = 0;
             Dictionary<string, string> outputCompanies = new Dictionary<string, string>();

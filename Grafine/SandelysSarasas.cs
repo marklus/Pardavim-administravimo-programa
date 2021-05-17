@@ -28,7 +28,7 @@ namespace Grafine
 
         private void GetContent()
         {
-            string userID = Database.GetUserID();
+            int userID = Database.GetUserID();
             MySqlDataReader contentData = Database.Select($"SELECT * FROM sandeliai WHERE vartotojoID={userID};");
             while (contentData.Read())
             {

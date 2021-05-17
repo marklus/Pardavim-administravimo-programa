@@ -1,0 +1,7 @@
+﻿Build started...
+1>------ Build started: Project: Grafine, Configuration: Debug Any CPU ------
+1>C:\Users\Tom\Documents\GitHub\Pardavim-administravimo-programa\Grafine\PrekiuPirkimas.cs(35,20,35,25): warning CS0219: The variable 'parts' is assigned but its value is never used
+1>C:\Users\Tom\Documents\GitHub\Pardavim-administravimo-programa\Grafine\PrekiuPirkimas.cs(119,20,119,25): warning CS0219: The variable 'parts' is assigned but its value is never used
+1>C:\Users\Tom\Documents\GitHub\Pardavim-administravimo-programa\Grafine\PrekiuPirkimas.cs(121,17,121,25): warning CS0219: The variable 'maxSpace' is assigned but its value is never used
+1>  Grafine -> C:\Users\Tom\Documents\GitHub\Pardavim-administravimo-programa\Grafine\bin\Debug\Grafine.exe
+========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========

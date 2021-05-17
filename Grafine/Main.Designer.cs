@@ -29,11 +29,18 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewContent = new System.Windows.Forms.DataGridView();
+            this.ColumnID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnBuyer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnSeller = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnPart = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.meniuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pradinisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -45,46 +52,94 @@
             this.atsijungtiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewContent)).BeginInit();
+            this.panel3.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DodgerBlue;
-            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.dataGridViewContent);
             this.panel1.Controls.Add(this.dateTimePicker1);
-            this.panel1.Controls.Add(this.panel4);
-            this.panel1.Location = new System.Drawing.Point(0, 79);
+            this.panel1.Location = new System.Drawing.Point(0, 75);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 315);
+            this.panel1.Size = new System.Drawing.Size(903, 379);
             this.panel1.TabIndex = 2;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // dataGridView1
+            // dataGridViewContent
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 39);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(776, 242);
-            this.dataGridView1.TabIndex = 6;
+            this.dataGridViewContent.AllowUserToAddRows = false;
+            this.dataGridViewContent.AllowUserToDeleteRows = false;
+            this.dataGridViewContent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewContent.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColumnID,
+            this.ColumnDate,
+            this.ColumnBuyer,
+            this.ColumnSeller,
+            this.ColumnPart,
+            this.ColumnAmount,
+            this.ColumnType});
+            this.dataGridViewContent.Location = new System.Drawing.Point(3, 39);
+            this.dataGridViewContent.Name = "dataGridViewContent";
+            this.dataGridViewContent.ReadOnly = true;
+            this.dataGridViewContent.Size = new System.Drawing.Size(897, 319);
+            this.dataGridViewContent.TabIndex = 41;
+            this.dataGridViewContent.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewContent_CellContentClick);
+            // 
+            // ColumnID
+            // 
+            this.ColumnID.HeaderText = "ID";
+            this.ColumnID.Name = "ColumnID";
+            this.ColumnID.ReadOnly = true;
+            this.ColumnID.Visible = false;
+            // 
+            // ColumnDate
+            // 
+            this.ColumnDate.HeaderText = "Data";
+            this.ColumnDate.Name = "ColumnDate";
+            this.ColumnDate.ReadOnly = true;
+            // 
+            // ColumnBuyer
+            // 
+            this.ColumnBuyer.HeaderText = "Užsakovas";
+            this.ColumnBuyer.Name = "ColumnBuyer";
+            this.ColumnBuyer.ReadOnly = true;
+            // 
+            // ColumnSeller
+            // 
+            this.ColumnSeller.HeaderText = "Pardavėjas";
+            this.ColumnSeller.Name = "ColumnSeller";
+            this.ColumnSeller.ReadOnly = true;
+            // 
+            // ColumnPart
+            // 
+            this.ColumnPart.HeaderText = "Prekė";
+            this.ColumnPart.Name = "ColumnPart";
+            this.ColumnPart.ReadOnly = true;
+            // 
+            // ColumnAmount
+            // 
+            this.ColumnAmount.HeaderText = "Kiekis";
+            this.ColumnAmount.Name = "ColumnAmount";
+            this.ColumnAmount.ReadOnly = true;
+            // 
+            // ColumnType
+            // 
+            this.ColumnType.HeaderText = "Tipas";
+            this.ColumnType.Name = "ColumnType";
+            this.ColumnType.ReadOnly = true;
             // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(267, 7);
+            this.dateTimePicker1.Location = new System.Drawing.Point(310, 7);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(298, 26);
             this.dateTimePicker1.TabIndex = 5;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Location = new System.Drawing.Point(0, 310);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(800, 5);
-            this.panel4.TabIndex = 4;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // panel2
             // 
@@ -97,10 +152,24 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Gray;
-            this.panel3.Location = new System.Drawing.Point(0, 393);
+            this.panel3.Controls.Add(this.button4);
+            this.panel3.Location = new System.Drawing.Point(0, 443);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(800, 57);
+            this.panel3.Size = new System.Drawing.Size(903, 60);
             this.panel3.TabIndex = 4;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
+            this.button4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button4.Location = new System.Drawing.Point(0, 3);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(130, 46);
+            this.button4.TabIndex = 42;
+            this.button4.Text = "Atstatyti";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // menuStrip1
             // 
@@ -111,7 +180,7 @@
             this.paskyraToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 76);
+            this.menuStrip1.Size = new System.Drawing.Size(903, 76);
             this.menuStrip1.TabIndex = 39;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -134,7 +203,7 @@
             // 
             this.pradinisToolStripMenuItem.BackColor = System.Drawing.Color.Gray;
             this.pradinisToolStripMenuItem.Name = "pradinisToolStripMenuItem";
-            this.pradinisToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.pradinisToolStripMenuItem.Size = new System.Drawing.Size(157, 26);
             this.pradinisToolStripMenuItem.Text = "Pradinis";
             this.pradinisToolStripMenuItem.Click += new System.EventHandler(this.pradinisToolStripMenuItem_Click);
             // 
@@ -142,21 +211,22 @@
             // 
             this.katalogasToolStripMenuItem.BackColor = System.Drawing.Color.Gray;
             this.katalogasToolStripMenuItem.Name = "katalogasToolStripMenuItem";
-            this.katalogasToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.katalogasToolStripMenuItem.Size = new System.Drawing.Size(157, 26);
             this.katalogasToolStripMenuItem.Text = "Katalogas";
+            this.katalogasToolStripMenuItem.Click += new System.EventHandler(this.katalogasToolStripMenuItem_Click);
             // 
             // pardavimaiToolStripMenuItem
             // 
             this.pardavimaiToolStripMenuItem.BackColor = System.Drawing.Color.Gray;
             this.pardavimaiToolStripMenuItem.Name = "pardavimaiToolStripMenuItem";
-            this.pardavimaiToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.pardavimaiToolStripMenuItem.Size = new System.Drawing.Size(157, 26);
             this.pardavimaiToolStripMenuItem.Text = "Pardavimai";
             // 
             // pirkimaiToolStripMenuItem
             // 
             this.pirkimaiToolStripMenuItem.BackColor = System.Drawing.Color.Gray;
             this.pirkimaiToolStripMenuItem.Name = "pirkimaiToolStripMenuItem";
-            this.pirkimaiToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.pirkimaiToolStripMenuItem.Size = new System.Drawing.Size(157, 26);
             this.pirkimaiToolStripMenuItem.Text = "Pirkimai";
             // 
             // paskyraToolStripMenuItem
@@ -182,6 +252,7 @@
             this.informacijaToolStripMenuItem.Name = "informacijaToolStripMenuItem";
             this.informacijaToolStripMenuItem.Size = new System.Drawing.Size(156, 26);
             this.informacijaToolStripMenuItem.Text = "Informacija";
+            this.informacijaToolStripMenuItem.Click += new System.EventHandler(this.informacijaToolStripMenuItem_Click);
             // 
             // atsijungtiToolStripMenuItem
             // 
@@ -190,13 +261,14 @@
             this.atsijungtiToolStripMenuItem.Name = "atsijungtiToolStripMenuItem";
             this.atsijungtiToolStripMenuItem.Size = new System.Drawing.Size(156, 26);
             this.atsijungtiToolStripMenuItem.Text = "Atsijungti";
+            this.atsijungtiToolStripMenuItem.Click += new System.EventHandler(this.atsijungtiToolStripMenuItem_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.DarkGray;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(292, 8);
+            this.label1.Location = new System.Drawing.Point(333, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(251, 59);
             this.label1.TabIndex = 40;
@@ -206,7 +278,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(903, 504);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.panel3);
@@ -215,7 +287,8 @@
             this.Name = "Main";
             this.Text = "Main";
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewContent)).EndInit();
+            this.panel3.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -225,11 +298,9 @@
 
         #endregion
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem meniuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pradinisToolStripMenuItem;
@@ -240,5 +311,14 @@
         private System.Windows.Forms.ToolStripMenuItem informacijaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem atsijungtiToolStripMenuItem;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dataGridViewContent;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnBuyer;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnSeller;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnPart;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnAmount;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnType;
+        private System.Windows.Forms.Button button4;
     }
 }

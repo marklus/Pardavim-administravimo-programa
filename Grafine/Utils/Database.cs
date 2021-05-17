@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.IO;
 using System.Threading.Tasks;
+using System.Security.Cryptography;
 
 namespace Grafine.Utils
 {
@@ -13,6 +14,7 @@ namespace Grafine.Utils
         private static Random rand = new Random();
         private static char[] library = { 'a', 'b', 'c', 'd', 'f', 'g' };
         static string fileName = "logins.txt";
+        protected static string hash = "f0xle@rn.l";
         //static FileStream Logins = new FileStream(fileName, FileMode.Open);
 
         static private string server = "localhost";
@@ -129,7 +131,7 @@ namespace Grafine.Utils
             return ret;
         }
 
-        public static string GetUserID()
+        public static int GetUserID()
         {
             string ret = "";
             using (StreamReader Logins = new StreamReader(fileName))
@@ -138,7 +140,7 @@ namespace Grafine.Utils
                 ret = Logins.ReadLine();
             }
             //LoginsRead.Close();
-            return ret;
+            return Int32.Parse(ret);
         }
         public static void Activate(string userName, string ID)
         {
@@ -204,7 +206,78 @@ namespace Grafine.Utils
             {
                 username = outputStream["vardas"].ToString();
             }
+            outputStream.Close();
             return username;
+        }
+        public static string GetUserCodeByID(int userID)
+        {
+            string userCode = Database.Select($"SELECT * FROM dalysadmin.vartotojai WHERE id ='{userID}';")["vidKo"].ToString();
+            //Console.WriteLine(userCode);
+            Close();
+            return "";
+        }
+        public static string GetUserIDByName(string userName)
+        {
+            string userCode = "";
+            MySqlDataReader outputStream = Database.Select($"SELECT * FROM dalysadmin.vartotojai WHERE vardas ='{userName}';");
+            while(outputStream.Read())
+            {
+                userCode = outputStream["id"].ToString();
+            }
+            Console.WriteLine(userCode);
+            Close();
+            return userCode;
+        }
+
+        public static string Encrypt(string value)
+        {
+            byte[] data = UTF8Encoding.UTF8.GetBytes(value);
+            using (MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider())
+            {
+                byte[] key = md5.ComputeHash(UTF8Encoding.UTF8.GetBytes(hash));
+                using (TripleDESCryptoServiceProvider tripDes = new TripleDESCryptoServiceProvider()
+                {
+                    Key = key,
+                    Mode = CipherMode.ECB,
+                    Padding = PaddingMode.PKCS7
+                })
+                {
+                    ICryptoTransform transform = tripDes.CreateEncryptor();
+                    byte[] results = transform.TransformFinalBlock(data, 0, data.Length);
+                    return Convert.ToBase64String(results, 0, results.Length);
+                }
+            }
+        }
+        public static string Decrypt(string value)
+        {
+            byte[] data = Convert.FromBase64String(value);
+            using (MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider())
+            {
+                byte[] key = md5.ComputeHash(UTF8Encoding.UTF8.GetBytes(hash));
+                using (TripleDESCryptoServiceProvider tripDes = new TripleDESCryptoServiceProvider()
+                {
+                    Key = key,
+                    Mode = CipherMode.ECB,
+                    Padding = PaddingMode.PKCS7
+                })
+                {
+                    ICryptoTransform transform = tripDes.CreateDecryptor();
+                    byte[] results = transform.TransformFinalBlock(data, 0, data.Length);
+                    return UTF8Encoding.UTF8.GetString(results);
+                }
+            }
+        }
+        public static string GetGlobalPartByID(int partID)
+        {
+            MySqlDataReader parts = Database.Select($"SELECT * FROM dalysadmin.dalys WHERE id ='{partID}';");
+            string partData = "";
+            while(parts.Read())
+            {
+                partData = $"{parts["marke"].ToString()}, {parts["tipas"].ToString()}, {parts["gamybos_metai"].ToString()}, {parts["gamintojas"].ToString()}, kaina:{parts["kaina"].ToString()}";
+            }
+
+            parts.Close();
+            return partData;
         }
     }
 }
