@@ -18,6 +18,7 @@ namespace Grafine
         public Informacija()
         {
             InitializeComponent();
+            GetContent();
         }
 
         private void buttonRegistr_Click(object sender, EventArgs e)
@@ -143,6 +144,20 @@ namespace Grafine
             newForm.ShowDialog();
             this.Close();
 
+        }
+        private void GetContent()
+        {
+            MySqlDataReader outputStreamUserdata = Database.Select($"SELECT * FROM dalysadmin.vartotojai WHERE id='{Database.GetUserID()}'");
+
+            while(outputStreamUserdata.Read())
+            {
+                textBoxCompanyName.Text = outputStreamUserdata["imonesPavad"].ToString();
+                textBoxEmail.Text = outputStreamUserdata["elPastas"].ToString();
+                textBoxPhoneNumber.Text = outputStreamUserdata["telNr"].ToString();
+                textBoxUserName.Text = outputStreamUserdata["vardas"].ToString();
+            }
+
+            outputStreamUserdata.Close();
         }
     }
 }
