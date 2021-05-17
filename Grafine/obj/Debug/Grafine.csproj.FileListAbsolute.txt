@@ -424,7 +424,6 @@ C:\Users\Martynas\Documents\GitHub\Pardavim-administravimo-programa\Grafine\obj\
 C:\Users\Martynas\Documents\GitHub\Pardavim-administravimo-programa\Grafine\obj\Debug\Grafine.Login.resources
 C:\Users\Martynas\Documents\GitHub\Pardavim-administravimo-programa\Grafine\obj\Debug\Grafine.Main.resources
 C:\Users\Martynas\Documents\GitHub\Pardavim-administravimo-programa\Grafine\obj\Debug\Grafine.popup.resources
-C:\Users\Martynas\Documents\GitHub\Pardavim-administravimo-programa\Grafine\obj\Debug\Grafine.Product.resources
 C:\Users\Martynas\Documents\GitHub\Pardavim-administravimo-programa\Grafine\obj\Debug\Grafine.Properties.Resources.resources
 C:\Users\Martynas\Documents\GitHub\Pardavim-administravimo-programa\Grafine\obj\Debug\Grafine.Registration.resources
 C:\Users\Martynas\Documents\GitHub\Pardavim-administravimo-programa\Grafine\obj\Debug\Grafine.csproj.GenerateResource.cache
@@ -432,7 +431,6 @@ C:\Users\Martynas\Documents\GitHub\Pardavim-administravimo-programa\Grafine\obj\
 C:\Users\Martynas\Documents\GitHub\Pardavim-administravimo-programa\Grafine\obj\Debug\Grafine.csproj.CopyComplete
 C:\Users\Martynas\Documents\GitHub\Pardavim-administravimo-programa\Grafine\obj\Debug\Grafine.exe
 C:\Users\Martynas\Documents\GitHub\Pardavim-administravimo-programa\Grafine\obj\Debug\Grafine.pdb
-C:\Users\Martynas\Documents\GitHub\Pardavim-administravimo-programa\Grafine\obj\Debug\Grafine.RegistrationStorehouse.resources
 C:\Users\Martynas\Documents\GitHub\Pardavim-administravimo-programa\Grafine\obj\Debug\Grafine.DeletingStorehouse.resources
 C:\Users\Tom\Documents\GitHub\Pardavim-administravimo-programa\Grafine\obj\Debug\Grafine.DeletingStorehouse.resources
 C:\Users\Tom\Documents\GitHub\Pardavim-administravimo-programa\Grafine\obj\Debug\Grafine.PrekiuPirkimas.resources
@@ -461,3 +459,8 @@ D:\Desktop\Inzinerija\Grafine\obj\Debug\Grafine.csproj.GenerateResource.cache
 D:\Desktop\Inzinerija\Grafine\obj\Debug\Grafine.csproj.CoreCompileInputs.cache
 D:\Desktop\Inzinerija\Grafine\obj\Debug\Grafine.exe
 D:\Desktop\Inzinerija\Grafine\obj\Debug\Grafine.pdb
+C:\Users\Martynas\Documents\GitHub\Pardavim-administravimo-programa\Grafine\obj\Debug\Grafine.PrekiuPirkimas.resources
+C:\Users\Martynas\Documents\GitHub\Pardavim-administravimo-programa\Grafine\obj\Debug\Grafine.PrekiuSarasas.resources
+C:\Users\Martynas\Documents\GitHub\Pardavim-administravimo-programa\Grafine\obj\Debug\Grafine.SandelysModifikacija.resources
+C:\Users\Martynas\Documents\GitHub\Pardavim-administravimo-programa\Grafine\obj\Debug\Grafine.SandelysRegistracija.resources
+C:\Users\Martynas\Documents\GitHub\Pardavim-administravimo-programa\Grafine\obj\Debug\Grafine.SandelysSarasas.resources

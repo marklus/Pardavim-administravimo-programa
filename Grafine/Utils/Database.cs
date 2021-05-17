@@ -17,7 +17,7 @@ namespace Grafine.Utils
         protected static string hash = "f0xle@rn.l";
         //static FileStream Logins = new FileStream(fileName, FileMode.Open);
 
-        static private string server = "localhost";
+        static private string server = "94.244.85.38";
         static private string database = "dalysadmin";
         static private string uid = "root";
         static private string password = "password";
