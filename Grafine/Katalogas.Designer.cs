@@ -60,6 +60,7 @@
             this.informacijaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.atsijungtiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label4 = new System.Windows.Forms.Label();
+            this.buttonExport = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewContent)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -307,7 +308,7 @@
             // 
             this.pradinisToolStripMenuItem.BackColor = System.Drawing.Color.Gray;
             this.pradinisToolStripMenuItem.Name = "pradinisToolStripMenuItem";
-            this.pradinisToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.pradinisToolStripMenuItem.Size = new System.Drawing.Size(157, 26);
             this.pradinisToolStripMenuItem.Text = "Pradinis";
             this.pradinisToolStripMenuItem.Click += new System.EventHandler(this.pradinisToolStripMenuItem_Click);
             // 
@@ -315,7 +316,7 @@
             // 
             this.katalogasToolStripMenuItem.BackColor = System.Drawing.Color.Gray;
             this.katalogasToolStripMenuItem.Name = "katalogasToolStripMenuItem";
-            this.katalogasToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.katalogasToolStripMenuItem.Size = new System.Drawing.Size(157, 26);
             this.katalogasToolStripMenuItem.Text = "Katalogas";
             this.katalogasToolStripMenuItem.Click += new System.EventHandler(this.katalogasToolStripMenuItem_Click);
             // 
@@ -323,7 +324,7 @@
             // 
             this.pardavimaiToolStripMenuItem.BackColor = System.Drawing.Color.Gray;
             this.pardavimaiToolStripMenuItem.Name = "pardavimaiToolStripMenuItem";
-            this.pardavimaiToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.pardavimaiToolStripMenuItem.Size = new System.Drawing.Size(157, 26);
             this.pardavimaiToolStripMenuItem.Text = "Pardavimai";
             this.pardavimaiToolStripMenuItem.Click += new System.EventHandler(this.pardavimaiToolStripMenuItem_Click);
             // 
@@ -331,7 +332,7 @@
             // 
             this.pirkimaiToolStripMenuItem.BackColor = System.Drawing.Color.Gray;
             this.pirkimaiToolStripMenuItem.Name = "pirkimaiToolStripMenuItem";
-            this.pirkimaiToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.pirkimaiToolStripMenuItem.Size = new System.Drawing.Size(157, 26);
             this.pirkimaiToolStripMenuItem.Text = "Pirkimai";
             this.pirkimaiToolStripMenuItem.Click += new System.EventHandler(this.pirkimaiToolStripMenuItem_Click);
             // 
@@ -356,7 +357,7 @@
             this.informacijaToolStripMenuItem.BackColor = System.Drawing.Color.Gray;
             this.informacijaToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.informacijaToolStripMenuItem.Name = "informacijaToolStripMenuItem";
-            this.informacijaToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.informacijaToolStripMenuItem.Size = new System.Drawing.Size(156, 26);
             this.informacijaToolStripMenuItem.Text = "Informacija";
             this.informacijaToolStripMenuItem.Click += new System.EventHandler(this.informacijaToolStripMenuItem_Click);
             // 
@@ -365,7 +366,7 @@
             this.atsijungtiToolStripMenuItem.BackColor = System.Drawing.Color.Gray;
             this.atsijungtiToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.atsijungtiToolStripMenuItem.Name = "atsijungtiToolStripMenuItem";
-            this.atsijungtiToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.atsijungtiToolStripMenuItem.Size = new System.Drawing.Size(156, 26);
             this.atsijungtiToolStripMenuItem.Text = "Atsijungti";
             this.atsijungtiToolStripMenuItem.Click += new System.EventHandler(this.atsijungtiToolStripMenuItem_Click);
             // 
@@ -380,12 +381,26 @@
             this.label4.TabIndex = 42;
             this.label4.Text = "Mašinų dalių katalogas";
             // 
+            // buttonExport
+            // 
+            this.buttonExport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.buttonExport.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
+            this.buttonExport.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonExport.Location = new System.Drawing.Point(123, 135);
+            this.buttonExport.Name = "buttonExport";
+            this.buttonExport.Size = new System.Drawing.Size(216, 30);
+            this.buttonExport.TabIndex = 44;
+            this.buttonExport.Text = "Eksportuoti į excel failą";
+            this.buttonExport.UseVisualStyleBackColor = false;
+            this.buttonExport.Click += new System.EventHandler(this.buttonExport_Click);
+            // 
             // Katalogas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
             this.ClientSize = new System.Drawing.Size(968, 536);
+            this.Controls.Add(this.buttonExport);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.textBoxFilter);
@@ -443,5 +458,6 @@
         private System.Windows.Forms.ToolStripMenuItem informacijaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem atsijungtiToolStripMenuItem;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button buttonExport;
     }
 }
