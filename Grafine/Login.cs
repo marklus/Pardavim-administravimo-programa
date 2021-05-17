@@ -18,11 +18,6 @@ namespace Grafine
         public Login()
         {
             InitializeComponent();
-            string password = "password";
-            string enc =Database.Encrypt(password);
-            Console.WriteLine(enc);
-            string denc = Database.Decrypt(enc);
-            Console.WriteLine(denc);
             this.textBoxPassword.AutoSize = false;
             this.textBoxPassword.Size = new Size(this.textBoxPassword.Size.Width, 40);
         }

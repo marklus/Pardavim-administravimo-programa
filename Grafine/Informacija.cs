@@ -31,9 +31,10 @@ namespace Grafine
             StreamReader input = new StreamReader("logins.txt");
             string usernameInternal = input.ReadLine();
             input.Close();
-            if(oldpass != null && oldpass != "")
+            Console.WriteLine(usernameInternal);
+            if (oldpass != null && oldpass != "")
             {
-                Database.Update($"UPDATE dalysadmin.vartotojai SET vardas='{username}', elPastas='{email}', telNr = '{phone}', imonesPavad = '{company}' WHERE vardas='{usernameInternal}' AND slaptazodis = '{oldpass}';");
+                Database.Update($"UPDATE dalysadmin.vartotojai SET vardas='{username}', elPastas='{email}', telNr = '{phone}', imonesPavad = '{company}' WHERE vardas='{usernameInternal}' AND slaptazodis = '{Database.Encrypt(oldpass)}';");
                 Database.Close();
 
                 StreamWriter clear = new StreamWriter("logins.txt");
@@ -49,9 +50,9 @@ namespace Grafine
                 popup newForm = new popup("Įveskite savo slaptažodį.");
                 newForm.ShowDialog();
             }
-           
 
-           
+
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -66,7 +67,7 @@ namespace Grafine
 
             if (newPass == newPassConf)
             {
-                Database.Update($"UPDATE dalysadmin.vartotojai SET slaptazodis = '{newPass}' WHERE vardas='{usernameInternal}' AND slaptazodis = '{oldpass}';");
+                Database.Update($"UPDATE dalysadmin.vartotojai SET slaptazodis = '{Database.Encrypt(newPass)}' WHERE vardas='{usernameInternal}' AND slaptazodis = '{Database.Encrypt(oldpass)}';");
 
                 StreamWriter clear = new StreamWriter("logins.txt");
                 clear.Close();
@@ -76,12 +77,12 @@ namespace Grafine
                 newForm.ShowDialog();
                 this.Close();
             }
-            else 
+            else
             {
                 popup newForm = new popup("Nauji slaptažodžiai nesutampa.");
                 newForm.ShowDialog();
             }
-           
+
 
 
 
